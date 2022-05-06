@@ -11,24 +11,25 @@
 
     <header class="flex">
       <div class="flex" id="divHeader">
-        <h1>Welcome to the Yag's Automotive Search Site </h1>
+        <h1> YAG's Automotive </h1>
         
 
       </div>
       <div class="flex"><img src="../sc/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
      
+     <div class="flex" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
     </header>
 
     <main>
-      <div class="flex" id="bodyMenu">  
-            
+    
+       <nav class="flex" >     
         <button id="homeButton" class="buttons" onclick="window.location.href='index.html';">Home</button>
         <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
         <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';">Reviews</button>
         <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';">Recalls</button>
         <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About</button>
-      
-    </div>
+      </nav>
+    
   
    <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
    
@@ -38,8 +39,9 @@
     On this page, you can enter the make, model and year of your vehicle, and any recalls on your vehicle selection will be displayed.
   </p>
    <br><br>
-
+<form>
    <fieldset text="Reviews Search" title="Reviews Search">
+     <legend>Search For Reviews</legend>
   <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
   <input type="text" class="searchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here">
   
@@ -55,20 +57,28 @@
   </fieldset>
   <br><br>
 
-    <button id="btnSubmit" class="buttons"> Submit Search</button>
-    <button id="btnClear"  class="buttons">Clear Search</button>
+    <button type="submit" id="btnSubmit" class="buttons"> Submit Search</button>
+    <button type="reset" id="btnClear"  class="buttons">Clear Search</button>
 
 
   <p class="searchResults">
-
+  Search results go here.
 
 
   </p>
+</form> 
     </main>
 
     <footer>
       Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive</a>
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a>
+
+          For more cool content, follow YAG's Automotive on social media: 
+          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="50"  title="Facebook Logo" alt="Facebook Logo"></a>
+          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="50" title="Instagram Logo" alt="Instagram Logo"></a>
+          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="50" title="Twitter Logo" alt="Twitter Logo"></a>
+          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="50" title="Snapchat Logo" alt="Snapchat Logo"></a>
+  
 
   </footer>
 	  <script src="js/scripts.js" defer></script>
