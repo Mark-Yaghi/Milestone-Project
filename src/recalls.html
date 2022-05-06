@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yag's Automotive Recalls Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <header class="flex">
+      <div class="flex" id="divHeader">
+        <h1>YAG's Automotive  </h1>
+        
+
+      </div>
+      <div class="flex"><img src="../sc/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
+     
+    </header>
+
+    <main>
+      <div class="flex" id="bodyMenu">       
+        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';" title="Go to the Home Page">Home</button>
+        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';" title="Go to the Search Page">Search Specs</button>
+        <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';" title="Go to the Reviews Page">Reviews</button>
+        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';" title="Go to the Recalls Page">Recalls</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';" title="Go to the About Page">About</button>
+    </div>
+   <h2>This is just some stuff to fill up the void</h2>
+   <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
+    
+  </p>
+  <p>
+    On this page, you can enter the VIN of your vehicle, and any recalls on your vehicle selection will be displayed.
+  </p>
+   <br><br>
+  <label>Please enter the vehicle's 17-character VIN here:</label>
+  <input type="text" class="searchBar" id="vinSearchBar" placeholder="Enter 17-character VIN here">
+  <br><br><br>
+  <button id="btnSubmit" class="buttons"> Submit Search</button>
+  <button id="btnClear"  class="buttons">Clear Search</button>
+
+  <p class="searchResults">
+
+
+
+  </p>
+    </main>
+
+    <footer>
+      Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive</a>
+
+  </footer>
+	  <script src="js/scripts.js" defer></script>
+  </body>
+</html>

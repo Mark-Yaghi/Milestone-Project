@@ -1,0 +1,108 @@
+* {   /*(B)*/
+    box-sizing: border-box;
+    --container1:100%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  }
+.container1 {
+    width:var(--container1);
+    /* width: clamp(800px, 80%, 1200px);*/
+    margin: 0 auto;
+    
+}
+.flex {
+    display: flex;
+    word-wrap: normal;
+}
+
+/*  Header  */
+header {          /* Define header and make it stick to the top of the page.*/
+   /* height: 100px;
+    width: 100%;*/
+    justify-content: space-evenly;
+    align-content: flex-end;
+    background-color: rgb(73, 167, 222);/**/
+    position: sticky;
+    top: 0px;
+    margin:0;        
+}
+
+header h1{
+    font-size: 2rem;
+    font-weight:bolder;
+    
+  }
+
+header>:first-child{
+
+    align-items:flex-start;
+
+}
+header>:last-child{
+
+    width:100%;
+    align-items: flex-end;
+    justify-content:start;
+}
+
+header>:last-child nav.flex{
+
+    width:100%;
+    height:100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    background-color: rgb(206, 225, 231);
+}
+
+header>:last-child nav.notActive
+{
+    color: rgb(226, 107, 107);
+}
+
+.buttons {
+
+  /*background-color: lightblue; */
+  height:50px;
+  width:40%;
+  font-size: large;
+  border-style: hidden;
+  mask-border: 0px;
+  
+}
+
+input[ type= "text"] {
+
+  width: 30%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+  background-color:beige
+}
+fieldset{
+
+    width:70%;
+}
+
+
+body .buttons:hover /* Change the hover color for all links in the header EXCEPT the inactive link*/
+{
+    background-color: aqua;
+}
+footer {
+    position:sticky;
+    bottom: 0;
+   /* background-color: rgb(225, 224, 170);*/
+    height: 70px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer a {
+
+    color:rgb(163, 76, 32);
+
+}

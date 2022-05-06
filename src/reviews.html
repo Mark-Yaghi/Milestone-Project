@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yag's Automotive Reviews Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <header class="flex">
+      <div class="flex" id="divHeader">
+        <h1>Welcome to the Yag's Automotive Search Site </h1>
+        
+
+      </div>
+      <div class="flex"><img src="../sc/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
+     
+    </header>
+
+    <main>
+      <div class="flex" id="bodyMenu">  
+            
+        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';">Home</button>
+        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
+        <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';">Reviews</button>
+        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';">Recalls</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About</button>
+      
+    </div>
+  
+   <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
+   
+  </p>
+
+  <p>
+    On this page, you can enter the make, model and year of your vehicle, and any recalls on your vehicle selection will be displayed.
+  </p>
+   <br><br>
+
+   <fieldset text="Reviews Search" title="Reviews Search">
+  <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
+  <input type="text" class="searchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here">
+  
+  <br><br>
+  <label>Please enter the vehicle's model here:&nbsp;</label>
+  <input type="text" class="searchBar" id="vehicleModel" placeholder="Enter Vehicle Model Here">
+  
+  <br><br>
+  <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
+  <input type="text" class="searchBar" id="vehicleName" placeholder="Enter Vehicle Year Here">
+  <br>
+
+  </fieldset>
+  <br><br>
+
+    <button id="btnSubmit" class="buttons"> Submit Search</button>
+    <button id="btnClear"  class="buttons">Clear Search</button>
+
+
+  <p class="searchResults">
+
+
+
+  </p>
+    </main>
+
+    <footer>
+      Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive</a>
+
+  </footer>
+	  <script src="js/scripts.js" defer></script>
+  </body>
+</html>
