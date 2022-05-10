@@ -23,11 +23,11 @@
     <main>
     
        <nav class="flex" >     
-        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';">Home</button>
-        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
-        <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';">Reviews</button>
-        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';">Recalls</button>
-        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About</button>
+        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';" title="Go to the Home Page">Home</button>
+        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';" title="Go to the Search Page">Search Specs</button>
+        <button id="reviewsButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Recalls Page"  >Reviews</button>
+        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';" title="Go to the Recalls Page">Recalls</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';" title="Go to the About Page">About</button>
       </nav>
     
   
@@ -39,7 +39,7 @@
     On this page, you can enter the make, model and year of your vehicle, and any recalls on your vehicle selection will be displayed.
   </p>
    <br><br>
-<form>
+
    <fieldset text="Reviews Search" title="Reviews Search">
      <legend>Search For Reviews</legend>
   <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
@@ -57,8 +57,10 @@
   </fieldset>
   <br><br>
 
-    <button type="submit" id="btnSubmit" class="buttons"> Submit Search</button>
-    <button type="reset" id="btnClear"  class="buttons">Clear Search</button>
+    <button  id="btnReviewSubmit" class="buttons"> Submit Search</button>
+    <button id="btnClear"  class="buttons">Clear Search</button>
+   <!-- <button id="btnRecallSubmit" class="buttons"> Submit Search</button>
+        <button id="btnClear"  class="buttons">Clear Search</button>-->
 
 
   <p class="searchResults">
@@ -66,7 +68,7 @@
 
 
   </p>
-</form> 
+
     </main>
 
     <footer>
@@ -81,6 +83,6 @@
   
 
   </footer>
-	  <script src="js/scripts.js" defer></script>
+	  <script src="js/reviews.js" defer></script>
   </body>
 </html>

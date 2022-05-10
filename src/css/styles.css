@@ -16,14 +16,14 @@
 
 /*  Header  */
 header {          /* Define header and make it stick to the top of the page.*/
-   /* height: 100px;
-    width: 100%;*/
+   /**/ height: 100px;
+    width: 100%;
     justify-content: space-evenly;
     align-content:space-between;
     background-color: black;/**/
-    position: sticky;
+    position:sticky;
     top: 0px;
-    margin:0;       
+    margin:0px;       
     color:white; 
 }
 
@@ -50,7 +50,7 @@ header>:last-child nav.flex{
     width:100%;
     height:100%;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-end
 }
 p.headerNav
 {
@@ -61,6 +61,9 @@ justify-content:end;
 
 body {
     background-color: rgb(206, 225, 231);
+    margin: 0px;
+
+    
 }
 
 header>:last-child nav.notActive
@@ -99,19 +102,20 @@ body .buttons:hover /* Change the hover color for all links in the header EXCEPT
 }
 footer {
    
-    bottom: 0;
-    background-color: white;  /* */
-    height: 100px;
+    bottom:0px;
+    background-color: rgba(0,0,0,.25);  /* */
+    height: 120px;
     width:100%;
     line-height: 50px;
     text-align: center;
     font-weight: bold;
-    /*position:fixed;*/
+    position:sticky; /**/
+    margin:0px;
+    padding:0px;
 }
 
 footer a {
 
-    color:rgb(163, 76, 32);
-
+    color:rgb(228, 226, 77);
 }
 
