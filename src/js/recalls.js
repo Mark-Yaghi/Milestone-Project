@@ -1,14 +1,11 @@
 
 let btnRecallSubmit = document.querySelector("#btnRecallSubmit");
-//let btnReviewSubmit = document.querySelector("#btnReviewSubmit");
+
 let btnClear = document.querySelector("#btnClear");
 let vinSearchBar = document.querySelector("#vinSearchBar");
 let vinSearchResults = document.querySelector("#vinSearchResults");
 let pictureDiv=document.querySelector("#pictureDiv");
 let vinSearchTerm;
-
-
-//btnReviewSubmit.addEventListener("click");
 
 btnRecallSubmit.addEventListener("click",e=> 
 {
@@ -25,8 +22,7 @@ btnRecallSubmit.addEventListener("click",e=>
             clrButton();
         }
        /* else if(validateVin(vinSearchTerm)!=true)    
-         {
-            
+         {            
             alert("The VIN you entered:" +vinSearchTerm+ " is not a valid VIN. Please enter a valid VIN." );
             clrButton();
          }   */

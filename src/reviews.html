@@ -11,18 +11,17 @@
 
     <header class="flex">
       <div class="flex" id="divHeader">
-        <h1> YAG's Automotive </h1>
-        
+        <h1> YAG's Automotive Research</h1>       
 
       </div>
-      <div class="flex"><img src="../sc/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
+      <div class="flex"><img src="../src/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
      
      <div class="flex" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
     </header>
 
     <main>
     
-       <nav class="flex" >     
+      <nav class="flex" id="navBar">     
         <button id="homeButton" class="buttons" onclick="window.location.href='index.html';" title="Go to the Home Page">Home</button>
         <button id="specsButton" class="buttons" onclick="window.location.href='search.html';" title="Go to the Search Page">Search Specs</button>
         <button id="reviewsButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Recalls Page"  >Reviews</button>
@@ -40,6 +39,9 @@
   </p>
    <br><br>
 
+  <div class="flex">
+   <aside class="flex">
+
    <fieldset text="Reviews Search" title="Reviews Search">
      <legend>Search For Reviews</legend>
   <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
@@ -51,17 +53,24 @@
   
   <br><br>
   <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
-  <input type="text" class="searchBar" id="vehicleName" placeholder="Enter Vehicle Year Here">
+  <input type="text" class="searchBar" id="vehicleYear" placeholder="Enter Vehicle Year Here">
   <br>
 
   </fieldset>
-  <br><br>
+
+ <div class="flex">
+  <img src="../src/img/jagLeft.png"  alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz">
+
+ </div>
+  </aside>
+
+  
+</div> 
+  
 
     <button  id="btnReviewSubmit" class="buttons"> Submit Search</button>
     <button id="btnClear"  class="buttons">Clear Search</button>
-   <!-- <button id="btnRecallSubmit" class="buttons"> Submit Search</button>
-        <button id="btnClear"  class="buttons">Clear Search</button>-->
-
+  
 
   <p class="searchResults">
   Search results go here.

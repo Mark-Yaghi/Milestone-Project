@@ -5,7 +5,7 @@ Because this site is desgined to be a proof-of-concept, it does not contain all 
 IMPORTANT  NOTES: 
 
 1) The recall.html page is currently connected to the pokemon API. It is functional, and returns 6 data items from the API. Therefore, to return data, the names of Pokemon characters must be entered (i.e., pikachu, ditto, scyther,etc.).
-2) To enable the (fully functional) VIN error checking on the recall.html page, the do as follows: 
+2) To enable the (fully functional) VIN error checking on the recall.html page, do as follows: 
     a) Remove the "/*" from line 27 and place it in front of " */ " on line 32. 
     b) Move the " // " in front of "vinSearchTerm" on line 37 and place in front of "vinSearchTerm" on line 38.
     c) Add a " /* " in front of the word "fetch" on line 40.
