@@ -1,97 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yag's Automotive Reviews Page</title>
-    <link rel="stylesheet" href="css/styles.css">
 
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yag's Automotive Reviews Page</title>
+  <link rel="stylesheet" href="css/styles.css">
 
-    <header class="flex">
-      <div class="flex" id="divHeader">
-        <h1> YAG's Automotive Research</h1>       
+</head>
+
+<body>
+
+  <header class="flex">
+    <div class="flex" id="divHeader">
+      <h1> YAG's Automotive Research</h1>
+
+    </div>
+    <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
+        title="Yags Logo"></div>
+
+    <div class="flex-row" id="headerNav">
+      <p class="headerNav">You are here: REVIEWS </p>
+    </div>
+    <div class="flex-row" id="headerWeather"> this is where the weather widget will go.</div>
+</header>
+    <nav class="flex" id="navBar">
+        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';"
+          title="Go to the Home Page">Home</button>
+        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';"
+          title="Go to the Search Page">Search Specs</button>
+        <button id="reviewsButton" class="buttons" style="background-color:rgb(194, 188, 188)"
+          title="You are on the Recalls Page">Reviews</button>
+        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';"
+          title="Go to the Recalls Page">Recalls</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';"
+          title="Go to the About Page">About</button>
+      </nav>
+  
+
+  <main>
+   
+      
+
+    <div id="mainBody">
+      <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the
+        information you might need to make an informed choice.
+
+      </p>
+
+      <p>
+        On this page, you can enter the make, model and year of your vehicle, and any reviews on your vehicle selection
+        will be displayed.
+      </p>
+      <br><br>
+
+      <div class="flex">
+        <aside class="flex">
+
+          <fieldset text="Reviews Search" title="Reviews Search">
+            <legend>Search For Reviews</legend>
+            <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
+            <input type="text" class="searchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
+
+            <br><br>
+            <label>Please enter the vehicle's model here:&nbsp;</label>
+            <input type="text" class="searchBar" id="vehicleModel" placeholder="Enter Vehicle Model Here" title="Enter the model name of your vehicle. For example, Civic, F-150, Camry, etc.">
+
+            <br><br>
+            <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" class="searchBar" id="vehicleYear" placeholder="Enter Vehicle Year Here" title="Enter the model year of your vehicle. For example, 2004, 2019, 2022, etc.">
+            <br>
+
+          </fieldset>
+
+          <div class="flex">
+            <img src="../src/img/jagLeft.png" alt="Picture of red Jaguar coupe." title="Jaguar parked.">
+
+          </div>
+        </aside>
+
 
       </div>
-      <div class="flex"><img src="../src/img/readytogo.png" id="headerPic" alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz"></div> 
-     
-     <div class="flex" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
-    </header>
-
-    <main>
-    
-      <nav class="flex" id="navBar">     
-        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';" title="Go to the Home Page">Home</button>
-        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';" title="Go to the Search Page">Search Specs</button>
-        <button id="reviewsButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Recalls Page"  >Reviews</button>
-        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';" title="Go to the Recalls Page">Recalls</button>
-        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';" title="Go to the About Page">About</button>
-      </nav>
-    
-  
-   <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
-   
-  </p>
-
-  <p>
-    On this page, you can enter the make, model and year of your vehicle, and any recalls on your vehicle selection will be displayed.
-  </p>
-   <br><br>
-
-  <div class="flex">
-   <aside class="flex">
-
-   <fieldset text="Reviews Search" title="Reviews Search">
-     <legend>Search For Reviews</legend>
-  <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
-  <input type="text" class="searchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here">
-  
-  <br><br>
-  <label>Please enter the vehicle's model here:&nbsp;</label>
-  <input type="text" class="searchBar" id="vehicleModel" placeholder="Enter Vehicle Model Here">
-  
-  <br><br>
-  <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
-  <input type="text" class="searchBar" id="vehicleYear" placeholder="Enter Vehicle Year Here">
-  <br>
-
-  </fieldset>
-
- <div class="flex">
-  <img src="../src/img/jagLeft.png"  alt="Picture of Hyundai Veracruz SUV" title="2012 Hyundai Veracruz">
-
- </div>
-  </aside>
-
-  
-</div> 
-  
-
-    <button  id="btnReviewSubmit" class="buttons"> Submit Search</button>
-    <button id="btnClear"  class="buttons">Clear Search</button>
-  
-
-  <p class="searchResults">
-  Search results go here.
 
 
-  </p>
+      <button id="btnReviewSubmit" class="buttons"> Submit Search</button>
+      <button id="btnClear" class="buttons">Clear Search</button>
+      <!--<button id="btnPrint" class="buttons">Print Results</button>-->
 
-    </main>
 
-    <footer>
-      Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a>
+      <p class="searchResults">
+        Search results go here.
 
-          For more cool content, follow YAG's Automotive on social media: 
-          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="50"  title="Facebook Logo" alt="Facebook Logo"></a>
-          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="50" title="Instagram Logo" alt="Instagram Logo"></a>
-          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="50" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="50" title="Snapchat Logo" alt="Snapchat Logo"></a>
-  
+
+      </p>
+    </div>
+  </main>
+
+  <footer class="flex-row" id="footerNav">
+
+    Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
+      href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a> <br>
+
+
+    For more cool content, follow YAG's Automotive on social media:
+    <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="35" title="Facebook Logo"
+        alt="Facebook Logo"></a>
+    <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="35" title="Instagram Logo"
+        alt="Instagram Logo"></a>
+    <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="35" title="Twitter Logo"
+        alt="Twitter Logo"></a>
+    <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="35" title="Snapchat Logo"
+        alt="Snapchat Logo"></a>
+
 
   </footer>
-	  <script src="js/reviews.js" defer></script>
-  </body>
+  <script src="js/reviews.js" defer></script>
+</body>
+
 </html>
