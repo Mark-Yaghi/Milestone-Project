@@ -72,7 +72,7 @@ body
     background-color: rgb(206, 225, 231);
     margin: 0; 
 }
-#mainBody
+#mainBody    /*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
 {
     margin-left: 5%;    
 }
