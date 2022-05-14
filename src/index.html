@@ -17,8 +17,11 @@
       <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
         title="Yags Logo"></div> 
      
-     <div class="flex-row" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
-     <iframe class ="flex" title="Environment Canada Weather" width="287px" height="90%" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+        <div class="flex-row" id="headerNav">
+          <p class="headerNav">You are here: <b>HOME</b> </p>
+          <p id="clock"></p>
+       </div>
+     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
     </header>
 
               <nav class="flex column ">
@@ -26,7 +29,7 @@
                   <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
                   <button id="reviewsButton" class="buttons"  onclick="window.location.href='reviews.html';">Reviews</button>
                   <button id="recallsButton" class="buttons"  onclick="window.location.href='recalls.html';">Recalls</button>
-                  <button id="aboutButton" class="buttons"  onclick="window.location.href='about.html';">About</button>
+                  <button id="aboutButton" class="buttons"  onclick="window.location.href='about.html';">About/Contact Us</button>
                </nav>    
      
 
@@ -54,6 +57,7 @@
   </footer>
 
   <script src="js/index.js" defer></script>
+  <script src="js/global.js" defer></script>
   </div>
   </body>
 </html>

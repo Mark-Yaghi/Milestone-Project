@@ -123,12 +123,12 @@ function reviewYearSubmit(yearSearchTerm)
          let dateYear=(dYear.getFullYear()+1);                   //get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
                 
          if(yearSearchTerm.length!=4)
-         {
+        {
               alert("Please enter a valid 4-character vehicle model year.");
               vehicleYear.value = "";
               vehicleYear.focus();
               yearReturnBool = false;   
-         }
+        }
           
         else if((yearSearchTerm<=1900) || (yearSearchTerm>dateYear)|| (isNaN(yearSearchTerm)))
         {

@@ -16,9 +16,11 @@
       </div>
       <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
         title="Yags Logo"></div> 
-     
-     <div class="flex-row" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
-     <iframe class ="flex" title="Environment Canada Weather" width="287px" height="90%" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+     <div class="flex-row" id="headerNav">
+        <p class="headerNav">You are here: <b>ABOUT</b> </p>
+        <p id="clock"></p>
+     </div>
+     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather"  src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
     </header>
 
 
@@ -28,10 +30,10 @@
         <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
         <button id="reviewsButton" class="buttons"  onclick="window.location.href='reviews.html';">Reviews</button>
         <button id="recallsButton" class="buttons"  onclick="window.location.href='recalls.html';">Recalls</button>
-        <button id="aboutButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the About Page" >About</button>
+        <button id="aboutButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the About Page" >About/Contact Us</button>
     </div>
     <div id="mainBody">
-   <h2>This is just some stuff to fill up the void</h2>
+   <h2><u>Who Are We and What Do We Do?</u></h2>
    <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
     <h2>THIS IS THE ABOUT PAGE</h2>
   </p>
@@ -45,9 +47,11 @@
           <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="40"  title="Facebook Logo" alt="Facebook Logo"></a>
           <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="40" title="Instagram Logo" alt="Instagram Logo"></a>
           <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="40" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="40" title="Snapchat Logo" alt="Snapchat Logo"></a>
+          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="40" title="Snapchat Logo" alt="Snapchat Logo"></a><br>
+          
 
   </footer>
 	  <script src="js/about.js" defer></script>
+    <script src="js/global.js" defer></script>
   </body>
 </html>

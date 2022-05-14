@@ -1,173 +1,178 @@
-* {   /*(B)*/
+* {
+    /*(B)*/
     box-sizing: border-box;
-    --container1:100%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif; 
-  }
+    --container1: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .container1 {
-    width:var(--container1);
+    width: var(--container1);
     /* width: clamp(800px, 80%, 1200px);*/
     margin: 0 auto;
-    
+
 }
+
 .flex {
     display: flex;
-    word-wrap: normal;        
+    word-wrap: normal;
 }
 
 /*  Header  */
-header {          /* Define header and make it stick to the top of the page.*/
+header {
+    /* Define header and make it stick to the top of the page.*/
     height: 100px;
     width: 100%;
     justify-content: space-between;
-    align-content:space-between;
-    background-color: rgb(8, 45, 193,.99);/**/
-    position:sticky;
+    align-content: space-between;
+    background-color: rgb(8, 45, 193, .99);
+    /**/
+    position: sticky;
     top: 0px;
-    margin:0px;       
-    color:white; 
+    margin: 0px;
+    color: white;
 }
 
-header h1{
+header h1 {
     font-size: 2rem;
-    font-weight:bolder;
-    font-family:Georgia, 'Times New Roman', Times, serif ;
-    margin-left: 30px;    
-  }
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 30px;
+}
 
-header>:first-child{
+header>:first-child {
 
     justify-self: flex-start;
-    align-items:center;
+    align-items: center;
 
 }
-header>:last-child{
 
-    width:10%;
+header>:last-child {
+    width: 10%;
     align-self: center;
-    justify-content:center;
+    justify-content: center;
 }
 
-header>:last-child nav.flex{
+/*header>:last-child nav.flex
+{
 
-    width:100%;
+    width:90%;
     height:100%;
     justify-content: space-between;
     align-items:flex-end
-}
-p.headerNav
-{
-font-size:15px;
-color:white;
-justify-content:end;
-align-self: center;
+}*/
+
+#headerNav {
+    justify-items: center;
+    padding-left: 4%;
 }
 
-#headerNav
-{
-   align-self: center;
+p.headerNav {
+    font-size: 15px;
+    color: white;
+    width: 70%
 }
 
-body
-{
+#weatherWidget {
+    width: 20%;
+    height: 90%;
+
+}
+
+body {
     background-color: rgb(206, 225, 231);
-    margin: 0; 
-}
-#mainBody    /*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
-{
-    margin-left: 5%;    
+    margin: 0;
 }
 
-.buttons
-{
-/*background-color: lightblue; */
-height:50px;
-width:40%;
-font-size: large;
-border-style: hidden;
-mask-border: 0px;
+#mainBody
+
+/*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
+    {
+    margin-left: 5%;
 }
 
-body .buttons:hover /* Change the hover color for all links in the header EXCEPT the inactive link*/
-{
-background-color: aqua;
+.buttons {
+    /*background-color: lightblue; */
+    height: 50px;
+    width: 40%;
+    font-size: large;
+    border-style: hidden;
+    mask-border: 0px;
 }
 
-input[ type= "text"]
- {
-  width: 30%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  resize: vertical;
-  background-color:beige
-}
-fieldset
-{
-    width:45%;      
+body .buttons:hover
+
+/* Change the hover color for all links in the header EXCEPT the inactive link*/
+    {
+    background-color: aqua;
 }
 
-fieldset .searchBar
-{
+input[ type="text"] {
+    width: 35%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: vertical;
+    background-color: beige
+}
+
+fieldset {
     width: 45%;
 }
 
-aside
-{
- justify-content: space-between; 
- padding:20px;
- width:100%;
+fieldset .searchBar {
+    width: 45%;
 }
 
-aside .flex
-{
-    justify-content:space-between;
+aside {
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+aside .flex {
+    justify-content: space-between;
     align-items: center;
 }
-aside .img
-{
-margin-right:30px;
+
+aside .img {
+    margin-right: 30px;
 }
 
-footer
-{   
-    bottom:0px;
-    background-color: rgb(8, 45, 193,.99);  /* */
-    color:white;
-    height: 120px;
-    width:100%;
+footer {
+    bottom: 0px;
+    background-color: rgb(8, 45, 193, .99);
+    /* */
+    color: white;
+    height: 4%;
+    width: 100%;
     line-height: 50px;
     text-align: center;
     font-weight: bold;
-    position:sticky; /**/  
+    position: sticky;
+    /**/
 }
 
-footer a
-{
-    color:rgb(228, 226, 77);
+footer a {
+    color: rgb(228, 226, 77);
 }
 
 /* The code below deals with the customization of the scroll bar. */
 
-::-webkit-scrollbar
-{
-    width:15px;
+::-webkit-scrollbar {
+    width: 15px;
 }
 
-::-webkit-scrollbar-track
-{
+::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
-    border-radius:15px;
-}
-
-::-webkit-scrollbar-thumb
-{
-    background: rgb(12, 185, 216); /*   rgb(97, 97, 250);*/
     border-radius: 15px;
 }
 
-::-webkit-scrollbar-thumb:hover
-{
-    background: darkblue;
+::-webkit-scrollbar-thumb {
+    background: rgb(12, 185, 216);
+    /*   rgb(97, 97, 250);*/
+    border-radius: 15px;
 }
 
-
+::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+}

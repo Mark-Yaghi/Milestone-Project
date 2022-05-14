@@ -19,11 +19,12 @@
     <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
         title="Yags Logo"></div>
 
-    <div class="flex-row" id="headerNav">
-      <p class="headerNav">You are here: REVIEWS </p>
-    </div>
+        <div class="flex-row" id="headerNav">
+          <p class="headerNav">You are here: <b>REVIEWS</b> </p>
+          <p id="clock"></p>
+       </div>
     <!-- Begin WeatherLink Fragment -->
-<iframe class ="flex" title="Environment Canada Weather" width="287px" height="90%" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+<iframe class ="flex" id="weatherWidget" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
     
 </header>
     <nav class="flex" id="navBar">
@@ -36,7 +37,7 @@
         <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';"
           title="Go to the Recalls Page">Recalls</button>
         <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';"
-          title="Go to the About Page">About</button>
+          title="Go to the About Page">About/Contact Us</button>
       </nav>
   
 
@@ -117,6 +118,7 @@
 
   </footer>
   <script src="js/reviews.js" defer></script>
+  <script src="js/global.js" defer></script>
 </body>
 
 </html>

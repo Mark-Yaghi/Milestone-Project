@@ -17,8 +17,11 @@
       <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
         title="Yags Logo"></div> 
      
-     <div class="flex-row" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
-     <iframe class ="flex" title="Environment Canada Weather" width="287px" height="90%" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+        <div class="flex-row" id="headerNav">
+          <p class="headerNav">You are here: <b>SEARCH</b> </p>
+          <p id="clock"></p>
+       </div>
+     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
     </header>
 
 
@@ -28,26 +31,61 @@
         <button id="searchButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Search Page">Search Specs</button>
         <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';" >Reviews</button>
         <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';">Recalls</button>
-        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About/Contact Us</button>
     </div>
     <div id="mainBody">
-   <h2>This is just some stuff to fill up the void</h2>
-   <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
-       <h2>THIS IS THE SEARCH PAGE</h2>
-  </p>
-</div>
+      <h2>Need information and specifications? You've come to the right place.</h2>
+      <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
+         
+      </p>
+      <p> Here, you can select a vehicle brand, then a vehicle model, and then you will have all the specifications of that specific vehicle displayed.</p>
+         
+      <div class="flex">
+        <aside class="flex">
+
+          <fieldset text="Vehicle Specifications Search" title="Specifications Search">
+            <legend>Search For Vehicle Specifications</legend>
+            <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
+            <input type="text" class="specSearchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
+
+            <br><br>
+            <label>Please enter the vehicle's model here:&nbsp;</label>
+            <input type="text" class="specSearchBar" id="vehicleModel" placeholder="Enter Vehicle Model Here" title="Enter the model name of your vehicle. For example, Civic, F-150, Camry, etc.">
+
+            <br><br>
+            <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" class="specSearchBar" id="vehicleYear" placeholder="Enter Vehicle Year Here" title="Enter the model year of your vehicle. For example, 2004, 2019, 2022, etc.">
+            <br>
+
+          </fieldset>
+
+          <div class="flex">
+            <img src="../src/img/jagLeft.png" alt="Picture of red Jaguar coupe." title="Jaguar parked.">
+
+          </div>
+        </aside>
+      </div>
+      <button id="btnReviewSubmit" class="buttons"> Submit Search</button>
+      <button id="btnClear" class="buttons">Clear Search</button>
+    
+    </div>
+       
+
+
+
     </main>
 
     <footer>
       Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a>
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a><br>
           For more cool content, follow YAG's Automotive on social media: 
-          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="50"  title="Facebook Logo" alt="Facebook Logo"></a>
-          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="50" title="Instagram Logo" alt="Instagram Logo"></a>
-          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="50" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="50" title="Snapchat Logo" alt="Snapchat Logo"></a>
+          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="30"  title="Facebook Logo" alt="Facebook Logo"></a>
+          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="30" title="Instagram Logo" alt="Instagram Logo"></a>
+          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="30" title="Twitter Logo" alt="Twitter Logo"></a>
+          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="30" title="Snapchat Logo" alt="Snapchat Logo"></a>
 
   </footer>
 	  <script src="js/search.js" defer></script>
+    <script src="js/global.js" defer></script>
   </body>
 </html>

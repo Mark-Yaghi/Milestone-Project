@@ -16,9 +16,11 @@
       </div>
       <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
         title="Yags Logo"></div> 
-     
-     <div class="flex-row" id="headerNav"> <p class="headerNav">You are here: REVIEWS </p></div>
-     <iframe class ="flex" title="Environment Canada Weather" width="287px" height="90%" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+      <div class="flex-row" id="headerNav">
+        <p class="headerNav">You are here: <b>RECALLS</b> </p>
+        <p id="clock"></p>
+      </div>
+     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather"  src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
     </header>
 
 
@@ -28,7 +30,7 @@
         <button id="specsButton" class="buttons" onclick="window.location.href='search.html';" title="Go to the Search Page">Search Specs</button>
         <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';" title="Go to the Reviews Page">Reviews</button>
         <button id="recallsButton" class="buttons" style="background-color: rgb(194, 188, 188);" title="You are on the Recalls Page">Recalls</button>
-        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';" title="Go to the About Page">About</button>
+        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';" title="Go to the About Page">About/Contact Us</button>
     </div>
     <div id="mainBody">
    <h2>This is just some stuff to fill up the void</h2>
@@ -62,14 +64,15 @@
     
  <!-- -->  <footer>
       Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a>
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a><br>
           For more cool content, follow YAG's Automotive on social media: 
-          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="50"  title="Facebook Logo" alt="Facebook Logo"></a>
-          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="50" title="Instagram Logo" alt="Instagram Logo"></a>
-          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="50" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="50" title="Snapchat Logo" alt="Snapchat Logo"></a>
+          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="40"  title="Facebook Logo" alt="Facebook Logo"></a>
+          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="40" title="Instagram Logo" alt="Instagram Logo"></a>
+          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="40" title="Twitter Logo" alt="Twitter Logo"></a>
+          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="40" title="Snapchat Logo" alt="Snapchat Logo"></a>
 
   </footer>
 	  <script src="../src/js/recalls.js" defer></script>
+    <script src="js/global.js" defer></script>
   </body>
 </html>
