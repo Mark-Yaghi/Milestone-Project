@@ -10,27 +10,45 @@
   <body>
   <div class="container">
     <header class="flex">
-      <div class="flex" id="divHeader">
-        <h1> YAG's Automotive Research</h1>       
+     <div class="flex">
+        <div class="column" id="headerTest">
+          <img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
+          title="Yags Logo">
 
-      </div>
-      <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
-        title="Yags Logo"></div> 
-     
-        <div class="flex-row" id="headerNav">
-          <p class="headerNav">You are here: <b>HOME</b> </p>
-          <p id="clock"></p>
-       </div>
-     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="search.html">Search Specs</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="recalls.html">Recalls</a>
+            <a href="about.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+              <img src="../src/img/hamburgerMenuBars2.PNG" ><!--class="fa fa-bars"</i>-->
+            </a>
+          </div>
+        </div>
+
+          <div class="flex-row" id="divHeader">
+              <h1> YAG's Automotive Research</h1>    
+        
+             <div class="flex" id="headerNav">
+               <p class="headerNav">You are here: <b>HOME</b> </p>
+               <p id="clock"></p>
+            </div>
+          </div>
+          <div class="flex" id="weatherWidget">
+          <iframe class ="flex"  title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+     </div>   
+   
     </header>
 
-              <nav class="flex column ">
+                 <!--<nav class="flex column ">
                   <button id="notActive" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Home Page">Home</button>
                   <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
                   <button id="reviewsButton" class="buttons"  onclick="window.location.href='reviews.html';">Reviews</button>
                   <button id="recallsButton" class="buttons"  onclick="window.location.href='recalls.html';">Recalls</button>
                   <button id="aboutButton" class="buttons"  onclick="window.location.href='about.html';">About/Contact Us</button>
-               </nav>    
+               </nav>    -->
      
 
 <main>
@@ -46,12 +64,12 @@
   
     <footer>
       Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a>
+          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a><br>
           For more cool content, follow YAG's Automotive on social media:
-          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="50"  title="Facebook Logo" alt="Facebook Logo"></a>
-          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="50" title="Instagram Logo" alt="Instagram Logo"></a>
-          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="50" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="50" title="Snapchat Logo" alt="Snapchat Logo"></a>
+          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="30"  title="Facebook Logo" alt="Facebook Logo"></a>
+          <a href="http://www.instagram.com"><img src="img/IG_Logo.jfif" height="30" title="Instagram Logo" alt="Instagram Logo"></a>
+          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.jfif" height="30" title="Twitter Logo" alt="Twitter Logo"></a>
+          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="30" title="Snapchat Logo" alt="Snapchat Logo"></a>
   
 
   </footer>

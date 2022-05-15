@@ -25,13 +25,6 @@ let yearReturnBool=false;
          yearSearchTerm = vehicleYear.value;
          yearSearchTerm = yearSearchTerm.trim();
 
-        // alert(makeSearchTerm.value);
-       // alert(makeSearchTerm.length);
-        //vehicleModel = vehicleModel.trim();
-        //vehicleYear = vehicleYear.trim();
-      
-        // alert("this is line 34, the vehicle year length:"+yearSearchTerm.length);
-
          reviewMakeSubmit(makeSearchTerm);
          alert("Back from the function, on line 35." + makeReturnBool);
 
@@ -41,7 +34,7 @@ let yearReturnBool=false;
          reviewYearSubmit(yearSearchTerm);
          alert("Back from the year validation function, on line 41." + yearReturnBool);
 
-        });
+ });
 
 btnClear.addEventListener("click", e => {
 

@@ -10,29 +10,40 @@
   <body>
 
     <header class="flex">
-      <div class="flex" id="divHeader">
-        <h1> YAG's Automotive Research</h1>       
+      <div class="flex">
+        <div class="column" id="headerTest">
+          <img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
+          title="Yags Logo">
 
-      </div>
-      <div class="flex"><img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
-        title="Yags Logo"></div> 
-     
-        <div class="flex-row" id="headerNav">
-          <p class="headerNav">You are here: <b>SEARCH</b> </p>
-          <p id="clock"></p>
-       </div>
-     <iframe class ="flex" id="weatherWidget" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+          <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="#search" class="active">Search Specs</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="recalls.html">Recalls</a>
+            <a href="about.html">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+              <img src="../src/img/hamburgerMenuBars2.PNG" >
+            </a>
+          </div>
+        </div>
+
+          <div class="flex-row" id="divHeader">
+              <h1> YAG's Automotive Research</h1>    
+        
+             <div class="flex" id="headerNav">
+               <p class="headerNav">You are here: <b>SEARCH</b> </p>
+               <p id="clock"></p>
+            </div>
+          </div>
+          <div class="flex" id="weatherWidget">
+          <iframe class ="flex"  title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+     </div> 
     </header>
 
 
     <main>
-      <div class="flex" id="bodyMenu">       
-        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';">Home</button>
-        <button id="searchButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the Search Page">Search Specs</button>
-        <button id="reviewsButton" class="buttons" onclick="window.location.href='reviews.html';" >Reviews</button>
-        <button id="recallsButton" class="buttons" onclick="window.location.href='recalls.html';">Recalls</button>
-        <button id="aboutButton" class="buttons" onclick="window.location.href='about.html';">About/Contact Us</button>
-    </div>
+      
     <div id="mainBody">
       <h2>Need information and specifications? You've come to the right place.</h2>
       <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
@@ -46,7 +57,7 @@
           <fieldset text="Vehicle Specifications Search" title="Specifications Search">
             <legend>Search For Vehicle Specifications</legend>
             <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
-            <input type="text" class="specSearchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
+            <input type="text" class="specSearchBar" src id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
 
             <br><br>
             <label>Please enter the vehicle's model here:&nbsp;</label>
@@ -67,7 +78,15 @@
       </div>
       <button id="btnReviewSubmit" class="buttons"> Submit Search</button>
       <button id="btnClear" class="buttons">Clear Search</button>
-    
+      
+      <p id="searchResults">
+
+        <!--Results returned from the API are displayed in this paragraph.-->
+
+    </p>
+
+
+
     </div>
        
 

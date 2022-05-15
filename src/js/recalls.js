@@ -87,7 +87,12 @@ btnRecallSubmit.addEventListener("click",e=>
         }
 });
 
-btnClear.addEventListener("click", clrButton());
+btnClear.addEventListener("click", e => {
+
+  e.preventDefault();
+  clrButton();
+
+});
 
 function clrButton()
 {
