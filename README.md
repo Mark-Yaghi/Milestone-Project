@@ -14,3 +14,6 @@ IMPORTANT  NOTES:
     f) Remove the " /* " from in front of "function....." on line 107 and place it in front of the " */ " on line 139.
 
 3) To enble the API and disable the VIN error checking, do number 2 above in reverse.
+
+Photo Credits: BMW Photo courtesy of Alex Mares (@axmares), via unsplash.com.
+Porsche 911 photo courtesy of Yuvraj Singh (@yxvi), via unsplash.com.

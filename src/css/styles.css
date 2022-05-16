@@ -1,12 +1,12 @@
 * {
     /*(B)*/
     box-sizing: border-box;
-    --container1: 100%;
+    --container: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.container1 {
-    width: var(--container1);
+.container {
+    width: var(--container);
     /* width: clamp(800px, 80%, 1200px);*/
     margin: 0 auto;
 }
@@ -19,7 +19,7 @@
 /*  Header  */
 header {
     /* Define header and make it stick to the top of the page.*/
-    height: 134px;
+    height: 138px;
     width: 100%;
     justify-content: space-between;
     align-content: space-between;
@@ -38,28 +38,6 @@ header h1 {
     margin-left: 25px;
 }
 
-/*header>:first-child {
-
-    justify-self: flex-start;
-    align-items: center;
-
-}
-header>:last-child nav.flex
-{
-    width:90%;
-    height:90%;  
-    margin-left: 150px;  
-    
-}
-
-header>:last-child {
-    width: 90%;
-    align-self:flex-end;
-    justify-content:flex-end;
-  
-    
-}*/
-
 #headerPic
 {
     width:100%;
@@ -72,10 +50,9 @@ header>:last-child {
 }
 #divHeader
 {
- justify-self: flex-end;
+ justify-self:right;
  margin-left: 0px;
  
-
 }
 
 p.headerNav {
@@ -86,13 +63,12 @@ p.headerNav {
 
 #weatherWidget {
     width: 20%;
-    height: 97%;
+    height: 94%;
     margin-top: 2px;
     margin-left:210px;
     padding-bottom: 0;
     margin-bottom: 0;
-    border-style: none;
-        
+    border-style: none;        
 }
 
 #weatherBox
@@ -106,6 +82,24 @@ body {
     margin: 0;
 }
 
+.homePage
+{
+    background-image:url("../img/BMWBackGround.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+    color: black;
+}
+
+.aboutPage
+{
+    background-image:url("../img/BMWBackGround.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0;
+    color: black;
+
+}
 #mainBody/*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
 {
     margin-left: 3%;
@@ -126,7 +120,7 @@ body .buttons:hover
 }
 
 input[ type="text" ] {
-    width: 35%;
+    width: 37%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -144,17 +138,24 @@ fieldset .searchBar {
 
 aside {
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     width: 100%;   
 }
 
-aside .flex {
+/**/aside .flex {
     justify-content: space-between;
     align-items: center;
 }
 
 aside .img {
     margin-right: 30px;
+}
+
+.form-inline
+{
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
 }
 
 footer {
@@ -227,7 +228,7 @@ footer a {
     display: none;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -237,7 +238,7 @@ footer a {
     }
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
       position: absolute;
@@ -251,3 +252,110 @@ footer a {
       text-align: left;
       max-height: 48px;
     }
+
+/* #6   phone screen*/
+@media (max-width: 400px)
+{
+    .container
+    {
+        width: 90%;
+    }
+    label, input 
+    {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
+    .image
+    {
+        display: none;
+    }
+    #weatherWidget
+    {
+        display:none;
+    }
+    #weatherBox
+    {
+        display:none;
+    }
+    p.headerNav
+    {
+        display:none;
+    }
+    #clock
+    {
+        display: none;
+    }
+
+}
+
+/* #7   tablet screen*/
+@media (min-width: 400px) and (max-width: 768px)
+{
+    .container
+    {
+        width: 75%;
+    }
+    label, input 
+    {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+    }
+    label 
+    {
+        text-align: center;
+    }
+    #weatherWidget
+    {
+        display:none;
+    }
+    #weatherBox
+    {
+        display:none;
+    }
+    .image{
+
+        display:none;
+    }
+   
+      p.headerNav
+      {
+        display:none;
+      }
+      #clock
+      {
+          display: none;
+      }
+
+
+}
+
+/* #8  monitor screen*/
+@media (min-width: 768px)
+{
+    #weatherWidget
+    {
+        display:block;
+    }
+    #weatherBox
+    {
+        display:block;
+    }
+    .container
+    {
+        width:100%
+    }
+    p.headerNav
+      {
+        display:block;
+      }
+      #clock
+      {
+          display: block;
+      }
+    
+
+
+    
+}   

@@ -97,10 +97,10 @@ btnReviewSubmit.addEventListener("click", e => {
                
             searchResults.innerText = `Here are the specifications of the ${vehicleDescription.year} ${vehicleDescription.makeName} ${vehicleDescription.modelName} : \nBody: ${vehicleDescription.body}; \nDoors: ${vehicleDescription.doors}; \nSeats: ${vehicleDescription.seats}; \nCurb Weight: ${vehicleDescription.weight} kg; 
             \n\nENGINE INFORMATION:
-            \n Engine Type: ${vehicleDescription.engineType}; \nPowertrain: ${vehicleDescription.powerTrain}; \nEngine Position:${vehicleDescription.enginePosition}; \nCylinders: ${vehicleDescription.cylinders}; \nEngine Displacement: ${vehicleDescription.engineDisplacement};
+            Engine Type: ${vehicleDescription.engineType}; \nPowertrain: ${vehicleDescription.powerTrain}; \nEngine Position:${vehicleDescription.enginePosition}; \nCylinders: ${vehicleDescription.cylinders}; \nEngine Displacement: ${vehicleDescription.engineDisplacement};
             Valves per Cylinder ${vehicleDescription.valves}; \nAspiration: ${vehicleDescription.aspiration};\nPower: ${vehicleDescription.power}hp; \nTorque: ${vehicleDescription.torque} lb/ft;                                                                                                    
              \n\nDRIVE / BRAKING  SYSTEM:
-             \nDrive Wheels: ${vehicleDescription.driveWheels}; \nNumber of Gears: ${vehicleDescription.noOfGears}; \nFront Brakes: ${vehicleDescription.frontBrakes};\n Rear Brakes: ${vehicleDescription.rearBrakes};
+             Drive Wheels: ${vehicleDescription.driveWheels}; \nNumber of Gears: ${vehicleDescription.noOfGears}; \nFront Brakes: ${vehicleDescription.frontBrakes};\n Rear Brakes: ${vehicleDescription.rearBrakes};
              \n\n FUEL SYSTEM: \nFuel System Type: ${vehicleDescription.fuelSystem};\nFuel Type: ${vehicleDescription.fuelType}; \nFuel Capacity:  ${vehicleDescription.fuelCapacity} liters; \nCity Mileage: ${vehicleDescription.cityMileage} l/100km; Highway Mileage: ${vehicleDescription.highwayMileage} l/100km; Combined Mileage: ${vehicleDescription.combinedMileage} l/100km;
               \n\nPERFORMANCE: \nAcceleration: ${vehicleDescription.acceleration}; \nTop Speed ${vehicleDescription.topSpeed} `;
               
