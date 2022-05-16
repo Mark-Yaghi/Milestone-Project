@@ -7,7 +7,6 @@ const options = {
 };
 
 
-
 let btnReviewSubmit = document.querySelector("#btnReviewSubmit");
 let btnClear = document.querySelector("#btnClear");
 let vehicleMake = document.querySelector("#vehicleMake");
@@ -19,11 +18,9 @@ let modelSearchTerm;
 let yearSearchTerm;
 let makeReturnBool = false;
 let modelReturnBool=false;
-let yearReturnBool=false;
 
 
-
- btnReviewSubmit.addEventListener("click", e => {
+btnReviewSubmit.addEventListener("click", e => {
 
      e.preventDefault();
 
@@ -33,19 +30,12 @@ let yearReturnBool=false;
 
          modelSearchTerm = vehicleModel.value;
          modelSearchTerm = modelSearchTerm.trim();
-
-        // yearSearchTerm = vehicleYear.value;
-        // yearSearchTerm = yearSearchTerm.trim();
-
+      
          reviewMakeSubmit(makeSearchTerm);
-         alert("Back from the function, on line 35." + makeReturnBool);
+        
 
          reviewModelSubmit(modelSearchTerm);
-         alert("Back from the model validation function, on line 38." + modelReturnBool);
-
-       //  reviewYearSubmit(yearSearchTerm);
-        // alert("Back from the year validation function, on line 41." + yearReturnBool);
-
+        
 
        //This is where we create the parameters to send to the API, by appending the make then model to the endpoint  
 
@@ -100,18 +90,21 @@ let yearReturnBool=false;
                   aspiration:data[0].engine_aspiration,
                   driveWheels:data[0].drive_wheel,
                   noOfGears:data[0].number_of_gears,
-                  frontBrakes:data[0].front_brkes,
+                  frontBrakes:data[0].front_brakes,
                   rearBrakes:data[0].rear_brakes,                          
                 }
-
-
+                   Clear();                         // Clear the screen to prepare screen for next data return
                
-            searchResults.innerText = `Here are the specifications of the  ${vehicleDescription.makeName} ${vehicleDescription.modelName} : \nBody: ${vehicleDescription.body}; \nDoors: ${vehicleDescription.doors}; \n Engine Type: ${vehicleDescription.engineType}; \n Powertrain: ${vehicleDescription.powerTrain};
-             \nWeight: ${vehicleDescription.weight}kg; 
-             Year: ${vehicleDescription.year}; \nFuel Capacity:  ${vehicleDescription.fuelCapacity} liters; \nCity Mileage: ${vehicleDescription.cityMileage}; Highway Mileage: ${vehicleDescription.highwayMileage}; Combined Mileage: ${vehicleDescription.combinedMileage};
-               `;
+            searchResults.innerText = `Here are the specifications of the ${vehicleDescription.year} ${vehicleDescription.makeName} ${vehicleDescription.modelName} : \nBody: ${vehicleDescription.body}; \nDoors: ${vehicleDescription.doors}; \nSeats: ${vehicleDescription.seats}; \nCurb Weight: ${vehicleDescription.weight} kg; 
+            \n\nENGINE INFORMATION:
+            \n Engine Type: ${vehicleDescription.engineType}; \nPowertrain: ${vehicleDescription.powerTrain}; \nEngine Position:${vehicleDescription.enginePosition}; \nCylinders: ${vehicleDescription.cylinders}; \nEngine Displacement: ${vehicleDescription.engineDisplacement};
+            Valves per Cylinder ${vehicleDescription.valves}; \nAspiration: ${vehicleDescription.aspiration};\nPower: ${vehicleDescription.power}hp; \nTorque: ${vehicleDescription.torque} lb/ft;                                                                                                    
+             \n\nDRIVE / BRAKING  SYSTEM:
+             \nDrive Wheels: ${vehicleDescription.driveWheels}; \nNumber of Gears: ${vehicleDescription.noOfGears}; \nFront Brakes: ${vehicleDescription.frontBrakes};\n Rear Brakes: ${vehicleDescription.rearBrakes};
+             \n\n FUEL SYSTEM: \nFuel System Type: ${vehicleDescription.fuelSystem};\nFuel Type: ${vehicleDescription.fuelType}; \nFuel Capacity:  ${vehicleDescription.fuelCapacity} liters; \nCity Mileage: ${vehicleDescription.cityMileage} l/100km; Highway Mileage: ${vehicleDescription.highwayMileage} l/100km; Combined Mileage: ${vehicleDescription.combinedMileage} l/100km;
+              \n\nPERFORMANCE: \nAcceleration: ${vehicleDescription.acceleration}; \nTop Speed ${vehicleDescription.topSpeed} `;
               
-            }                                  
+        }                                
 
         })
         .catch(exception => {searchResults.innerText = exception; })// Promise style catch, to be used after .then() statements.   
@@ -132,9 +125,6 @@ btnClear.addEventListener("click", e => {
 function reviewMakeSubmit(makeSearchTerm)
 {
 
-       // alert("Line 57, in the make function. makeSearchTerm:" + makeSearchTerm);
-
-
         if (makeSearchTerm.length == 0) 
         {
                 alert("Please enter a vehicle manufacturer/make.");
@@ -151,7 +141,6 @@ function reviewMakeSubmit(makeSearchTerm)
         }
         else 
         {
-               // alert("You entered a valid name: " + makeSearchTerm);
                 vehicleMake.value = vehicleMake.value.toUpperCase();
                 makeReturnBool = true;
                // vehicleModel.focus();  //We have a valid name, set focus to the next field
@@ -180,56 +169,28 @@ function reviewModelSubmit(modelSearchTerm)
         }
         else 
         {
-               // alert("You entered a valid name: " + modelSearchTerm);
-                vehicleModel.value = vehicleModel.value.toUpperCase();
+               
+               if(!(Number.isInteger(vehicleModel.value)))
+               {
+                    alert("Line 189."+vehicleModel.value);   
+                   // vehicleModel.value = vehicleModel.value.toUpperCase();
+               }
                 modelReturnBool = true;
                 //vehicleYear.focus();  //We have a valid name, set focus to the next field
 
         }
-        modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //capitalize the first letter of the model name
-       // alert(" your vehicle model is a: " + makeSearchTerm.toUpperCase() + " " + modelSearchTerm);
+       // modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //capitalize the first letter of the model name
+        
         
         return modelReturnBool;
 }
 
-function reviewYearSubmit(yearSearchTerm)
-{
 
-        let validYear = false;
-        
-        const dYear=new Date();                                     //create a date object
-         let dateYear=(dYear.getFullYear()+1);                   //get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
-                
-         if(yearSearchTerm.length!=4)
-        {
-              alert("Please enter a valid 4-character vehicle model year.");
-              vehicleYear.value = "";
-              vehicleYear.focus();
-              yearReturnBool = false;   
-        }
-          
-        else if((yearSearchTerm<=1900) || (yearSearchTerm>dateYear)|| (isNaN(yearSearchTerm)))
-        {
-             alert("Bad year entered; please enter a model year for your vehicle between 1900 and "+dateYear+" :");  
-             vehicleYear.value="";
-             vehicleYear.focus();
-        }
-      
-        else
-        {
-              alert("Vehicle model year is "+yearSearchTerm);
-              yearReturnBool=true;        
-        }
-        
-       return yearReturnBool;
-
-}
 function Clear() 
 {
         vehicleMake.value = "";
         vehicleMake.focus();
         vehicleModel.value = "";
-        vehicleYear.value = "";
         searchResults.innerText = "";    //delete the previous results/clear the screen in prep for the next search.
 }
 

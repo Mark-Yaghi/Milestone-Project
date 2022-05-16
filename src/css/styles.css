@@ -9,7 +9,6 @@
     width: var(--container1);
     /* width: clamp(800px, 80%, 1200px);*/
     margin: 0 auto;
-
 }
 
 .flex {
@@ -61,7 +60,12 @@ header>:last-child {
     
 }*/
 
+#headerPic
+{
+    width:100%;
+    height:61%;
 
+}
 #headerNav {
     justify-items: center;
     padding-left: 10%;
@@ -69,6 +73,8 @@ header>:last-child {
 #divHeader
 {
  justify-self: flex-end;
+ margin-left: 0px;
+ 
 
 }
 
@@ -85,7 +91,14 @@ p.headerNav {
     margin-left:210px;
     padding-bottom: 0;
     margin-bottom: 0;
-    
+    border-style: none;
+        
+}
+
+#weatherBox
+{
+border-style:none;
+
 }
 
 body {
@@ -99,18 +112,16 @@ body {
 }
 
 .buttons {
-    /*background-color: lightblue; */
+    background-color: lightblue;  /**/
     height: 50px;
     width: 40%;
     font-size: large;
     border-style: hidden;
-    mask-border: 0px;
+   
 }
 
 body .buttons:hover
-
-/* Change the hover color for all links in the header EXCEPT the inactive link*/
-    {
+{
     background-color: aqua;
 }
 
@@ -134,8 +145,7 @@ fieldset .searchBar {
 aside {
     justify-content: space-between;
     padding: 20px;
-    width: 100%;
-   
+    width: 100%;   
 }
 
 aside .flex {
@@ -233,8 +243,6 @@ footer a {
       position: absolute;
       right: 0;
       top: 0;
-      
-
     }
 }
     .topnav.responsive a {

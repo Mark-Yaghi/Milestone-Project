@@ -26,14 +26,13 @@ let yearReturnBool=false;
          yearSearchTerm = yearSearchTerm.trim();
 
          reviewMakeSubmit(makeSearchTerm);
-         alert("Back from the function, on line 35." + makeReturnBool);
-
+         
          reviewModelSubmit(modelSearchTerm);
-         alert("Back from the model validation function, on line 38." + modelReturnBool);
-
+        
          reviewYearSubmit(yearSearchTerm);
-         alert("Back from the year validation function, on line 41." + yearReturnBool);
 
+         searchResults.innerText="Search Results Go Here."
+         
  });
 
 btnClear.addEventListener("click", e => {
@@ -43,12 +42,10 @@ btnClear.addEventListener("click", e => {
 
 });
 
-
 function reviewMakeSubmit(makeSearchTerm)
 {
 
        // alert("Line 57, in the make function. makeSearchTerm:" + makeSearchTerm);
-
 
         if (makeSearchTerm.length == 0) 
         {
@@ -66,7 +63,6 @@ function reviewMakeSubmit(makeSearchTerm)
         }
         else 
         {
-               // alert("You entered a valid name: " + makeSearchTerm);
                 vehicleMake.value = vehicleMake.value.toUpperCase();
                 makeReturnBool = true;
                // vehicleModel.focus();  //We have a valid name, set focus to the next field
@@ -109,8 +105,6 @@ function reviewModelSubmit(modelSearchTerm)
 
 function reviewYearSubmit(yearSearchTerm)
 {
-
-        let validYear = false;
         
         const dYear=new Date();                                     //create a date object
          let dateYear=(dYear.getFullYear()+1);                   //get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
@@ -132,8 +126,7 @@ function reviewYearSubmit(yearSearchTerm)
       
         else
         {
-              alert("Vehicle model year is "+yearSearchTerm);
-              yearReturnBool=true;        
+             yearReturnBool=true;        
         }
         
        return yearReturnBool;

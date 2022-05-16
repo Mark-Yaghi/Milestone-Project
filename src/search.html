@@ -22,7 +22,7 @@
             <a href="recalls.html">Recalls</a>
             <a href="about.html">About</a>
             <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-              <img src="../src/img/hamburgerMenuBars2.PNG" >
+              <img src="../src/img/hamburgerMenuBars2.PNG" alt="Site Menu">
             </a>
           </div>
         </div>
@@ -36,7 +36,7 @@
             </div>
           </div>
           <div class="flex" id="weatherWidget">
-          <iframe class ="flex"  title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" allowtransparency="true" frameborder="0"></iframe>
+          <iframe class ="flex" id="weatherBox" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e"></iframe>
         </div>
      </div> 
     </header>
@@ -49,24 +49,24 @@
       <p>This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
          
       </p>
-      <p> Here, you can select a vehicle brand, then a vehicle model, and then you will have all the specifications of that specific vehicle displayed.</p>
+      <p> Here, you can select a vehicle brand, then a vehicle model, and then you will have all the specifications of that specific vehicle displayed. <b>PLEASE NOTE:</b> If a vehicle is not in the database, you will see the fields filled with "undefined". </p>
          
       <div class="flex">
         <aside class="flex">
 
-          <fieldset text="Vehicle Specifications Search" title="Specifications Search">
+          <fieldset name="Vehicle Specifications Search" title="Specifications Search">
             <legend>Search For Vehicle Specifications</legend>
             <label>Please enter the vehicle's make here:&nbsp;&nbsp;</label>
-            <input type="text" class="specSearchBar" src id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
+            <input type="text" class="specSearchBar" id="vehicleMake" placeholder="Enter Vehicle Make Here" title="Enter the name of your vehicle's manufacturer. For example, Honda, Ford, Toyota, etc.">
 
             <br><br>
             <label>Please enter the vehicle's model here:&nbsp;</label>
             <input type="text" class="specSearchBar" id="vehicleModel" placeholder="Enter Vehicle Model Here" title="Enter the model name of your vehicle. For example, Civic, F-150, Camry, etc.">
 
-            <br><br>
+          <!--  <br><br>
             <label>Please enter the vehicle's year here:&nbsp;&nbsp;&nbsp;</label>
             <input type="text" class="specSearchBar" id="vehicleYear" placeholder="Enter Vehicle Year Here" title="Enter the model year of your vehicle. For example, 2004, 2019, 2022, etc.">
-            <br>
+            <br>-->
 
           </fieldset>
 
@@ -84,14 +84,7 @@
         <!--Results returned from the API are displayed in this paragraph.-->
 
     </p>
-
-
-
     </div>
-       
-
-
-
     </main>
 
     <footer>
