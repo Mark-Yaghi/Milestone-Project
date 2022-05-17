@@ -90,17 +90,8 @@ fetch(`https://cis-vin-decoder.p.rapidapi.com/vinDecode?vin=${vinSearchTerm}`, o
 					alert("recall Number:"+recallDetails.recallNumber+recallDetails.recallDate+recallDetails.recallComponent+recallDetails.recallSummary+recallDetails.recallConsequence+recallDetails.recallRemedy+recallDetails.recallNotes);
 					//vehicleArray[i].push([recallDetails.recallNumber]);
 					vehicleArray.push([recallDetails.recallNumber,recallDetails.recallDate,recallDetails.recallComponent,recallDetails.recallSummary,recallDetails.recallConsequence,recallDetails.recallRemedy,recallDetails.recallNotes]); //populate the array;     
-					vinRecallDetails.innerText=`${recallDetails.recallNumber}, ${recallDetails.recallDate}`;              
+					vinRecallDetails.innerText+=`${recallDetails.recallNumber}, ${recallDetails.recallDate}`;              
 				}     
-				
-				
-				let count=0;
-				do
-				{
-					count++;
-					vinRecallDetails.innerText=`${recallDetails.recallNumber}, ${recallDetails.recallDate}`; 
-
-				}while (count<recallArraySize);
 				
 				
 				//profileArray.push(vehicleArray); 
