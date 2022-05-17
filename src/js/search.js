@@ -61,7 +61,7 @@ btnReviewSubmit.addEventListener("click", e => {
 
             if (data)
             {                       
-              let vehicleDescription = 
+              let vehicleDescription =//   for(i=0;i<data[i]; i++)
                 {
                   makeName: data[0].make,
                   modelName:data[0].model,

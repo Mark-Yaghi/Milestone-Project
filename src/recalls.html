@@ -23,7 +23,7 @@
             <a href="#recalls" class="active">Recalls</a>
             <a href="about.html">About</a>
             <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-              <img src="../src/img/hamburgerMenuBars2.PNG" alt="Site Menu"><!--class="fa fa-bars"</i>-->
+              <img src="../src/img/hamburgerMenuBars2.PNG" alt="Site Menu">
             </a>
           </div>
         </div>
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="flex" id="weatherWidget">
-          <iframe class ="flex" id="weatherBox" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" ></iframe>
+          <iframe class ="flex" id="weatherBox" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e" alt="Local Weather Forecast"></iframe>
         </div>
      </div> 
     </header>
@@ -67,6 +67,11 @@
 
         </p>
 
+        <p id="vinRecallDetails">
+
+                 <!--This paragrapgh is where the rows of recall details go. We might have 1 recall returned per vin, we might have 10.-->
+        </p>
+
         <div id="pictureDiv" class="flex">
 
           <!-- Character pics are displayed here in this div.-->
@@ -85,7 +90,7 @@
           <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="40" title="Snapchat Logo" alt="Snapchat Logo"></a>
 
   </footer>
-	  <script src="../src/js/recalls.js" defer></script>
+	  <script src="js/recallAPITester.js" defer></script><!--recalls.js-->
     <script src="js/global.js" defer></script>
   </body>
 </html>
