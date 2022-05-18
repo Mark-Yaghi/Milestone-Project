@@ -172,8 +172,7 @@ function reviewModelSubmit(modelSearchTerm)
                
                if(!(Number.isInteger(vehicleModel.value)))
                {
-                    alert("Line 189."+vehicleModel.value);   
-                   // vehicleModel.value = vehicleModel.value.toUpperCase();
+                    vehicleModel.value = vehicleModel.value.toUpperCase();
                }
                 modelReturnBool = true;
                 //vehicleYear.focus();  //We have a valid name, set focus to the next field
