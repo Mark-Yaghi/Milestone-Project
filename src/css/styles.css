@@ -16,6 +16,12 @@
     justify-content: space-between;
 }
 
+.hidden
+{
+
+    display:none;
+}
+
 /*  Header  */
 header {
     /* Define header and make it stick to the top of the page.*/
@@ -107,7 +113,7 @@ body {
     height: 50px;
     width: 40%;
     font-size: large;    
-    border-radius: 10px;   
+    border-style: hidden;  
 }
 body .buttons:hover
 {
@@ -120,8 +126,7 @@ body .buttons:hover
     height: 50px;
     width: 20%;
     font-size: large;
-    
-    border-radius: 10px; 
+    border-style: hidden;    
 }
 
 body .buttonsSmall:hover
@@ -150,6 +155,18 @@ input[ type="text" ], textarea {
     background-color: beige;
 }
 
+.textAbout
+{
+    width: 75%;
+    height:35px;
+    padding: 1px;
+    margin-top: 10px;    
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: beige;
+    justify-items: right;
+}
+
 fieldset {
     width: 45%;
 }
@@ -160,24 +177,42 @@ fieldset .searchBar {
 
 textarea
 {
-        width: 70%;
+    width: 60%;
 }
 
-.aboutFieldset
+ .aboutFieldset
 {
-    display: flex;
-    align-items: flex-start;
-    justify-items:flex-start;
-    width:40%;
+    justify-content: space-between;
+    width:55%;
 
-}
-
-#contactUs
+}/*
+   #contactUs
 {
-    display: flex;
+  display: flex;
+    flex-flow:column;          this line here 
     align-items:center;
-    justify-items:flex-start;
+    justify-content:space-between;
+} */
 
+.form-flex
+{
+   display:flex;
+   justify-content: space-evenly;
+   
+}
+.flex-col
+{
+    flex-direction:column;    
+}
+
+.flex-row
+{
+    flex-direction:row;
+}
+
+.flex-center
+{
+    align-items:center;
 }
 
 aside {

@@ -1,104 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yag's Automotive About Page</title>
-    <link rel="stylesheet" href="css/styles.css">
 
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yag's Automotive About Page</title>
+  <link rel="stylesheet" href="css/styles.css">
 
-    <header class="flex">
-      <div class="flex">
-        <div class="column" id="headerTest">
-          <img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo"
-          title="Yags Logo">
+</head>
 
-          <div class="topnav" id="myTopnav">
-            <a href="index.html" >Home</a>
-            <a href="search.html">Search Specs</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="recalls.html">Recalls</a>
-            <a href="#home" class="active">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="showMenu()">
-              <img src="../src/img/hamburgerMenuBars2.PNG" alt="Site Menu">
-            </a>
-          </div>
+<body>
+
+  <header class="flex">
+    <div class="flex">
+      <div class="column" id="headerTest">
+        <img src="../src/img/YagsLogo.png" id="headerPic" alt="Picture of YAGS Logo" title="Yags Logo">
+
+        <div class="topnav" id="myTopnav">
+          <a href="index.html">Home</a>
+          <a href="search.html">Search Specs</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="recalls.html">Recalls</a>
+          <a href="#home" class="active">About</a>
+          <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+            <img src="../src/img/hamburgerMenuBars2.PNG" alt="Site Menu">
+          </a>
         </div>
-
-          <div class="flex-row" id="divHeader">
-              <h1> YAG's Automotive Research</h1>    
-        
-             <div class="flex" id="headerNav">
-               <p class="headerNav">You are here: <b>ABOUT</b> </p>
-               <p id="clock"></p>
-            </div>
-          </div>
-          <div class="flex" id="weatherWidget">
-          <iframe class ="flex" id="weatherBox" title="Environment Canada Weather" src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e"></iframe>
-        </div>
-     </div> 
-    </header>
-
-
-    <main id="aboutPage" class="aboutPage">
-    <!-- <div class="flex" id="bodyMenu">       
-        <button id="homeButton" class="buttons" onclick="window.location.href='index.html';">Home</button>
-        <button id="specsButton" class="buttons" onclick="window.location.href='search.html';">Search Specs</button>
-        <button id="reviewsButton" class="buttons"  onclick="window.location.href='reviews.html';">Reviews</button>
-        <button id="recallsButton" class="buttons"  onclick="window.location.href='recalls.html';">Recalls</button>
-        <button id="aboutButton" class="buttons" style="background-color:rgb(194, 188, 188)"  title="You are on the About Page" >About/Contact Us</button>
-    </div>--> 
-    <div id="mainBody">
-   <h2>Who Are We and What Do We Do?</h2>
-   <p class="bodyText"> This site is designed to let you enter the specifics of a vehicle of interest to you and get you all the information you might need to make an informed choice.
-    We gather information from several outside, 3rd-party sources, and make that information available to you, our valued client. Unfortunately sometimes, these sources 
-    don't always have the information on a specific vehicle. We do endeavour to provide you with the most accurate information we can given these limitations. <br><br>
-
-    <p class="bodyText">
-      Please feel free to contact us by filling out the form below.      
-    </p>
-    <form class="bodyText">
-      <fieldset name="contactUs" title="Contact Us / Leave Comments" class="aboutFieldset">
-       <div class="flex-row" id="contactUs">
-         <legend>Contact Us / Leave Comments</legend><br><br>
-        <label class="flex-row">First Name:</label>  <input type="text" id="firstName" placeholder="First Name" class="flex-row"> <br>
-        <label class="flex-row">Last Name:</label>   <input type="text" id ="lastName" placeholder="Last Name" class="flex-row"> <br>
-        <label class="flex-row">Address:</label>     <input type="text" id="address" placeholder="Address">   <br>
-        <label class="flex-row">Postal Code:</label> <input type="text" id="pCode" placeholder="Postal Code"><br>
-        <label class="flex-row">Main Phone:</label>  <input type="text" id="mainPhone" placeholder="Main Phone"><br>
-        <label class="flex-row">Cell Phone:</label>  <input type="text" id="cellPhone" placeholder="Cell Phone">  <br>
-        <label class="flex-row">Email:</label>       <input type="text" id="email" placeholder="Email Address">  <br><br>
-        <label class="flex-row">Comments:</label>    <textarea id="commentArea" rows="5" cols="100" resize="none" placeholder="Please leave comments here"></textarea>  
       </div>
 
-      </fieldset>
-      <br><br>
-      <button id="btnCommentSubmit" class="buttonsSmall"> Submit</button>
-      <button id="btnClear" class="buttonsSmall">Clear</button>
+      <div class="flex-row" id="divHeader">
+        <h1> YAG's Automotive Research</h1>
 
-    </form>
+        <div class="flex" id="headerNav">
+          <p class="headerNav">You are here: <b>ABOUT</b> </p>
+          <p id="clock"></p>
+        </div>
+      </div>
+      <div class="flex" id="weatherWidget">
+        <iframe class="flex" id="weatherBox" title="Environment Canada Weather"
+          src="https://weather.gc.ca/wxlink/wxlink.html?cityCode=ab-50&amp;lang=e"></iframe>
+      </div>
+    </div>
+  </header>
+
+  <main id="aboutPage" class="aboutPage">
+ 
+    <div id="mainBody">
+      <h2>Who Are We and What Do We Do?</h2>
+      <p class="bodyText"> This site is designed to let you enter the specifics of a vehicle of interest to you and get
+        you all the information you might need to make an informed choice.
+        We gather information from several outside, 3rd-party sources, and make that information available to you, our
+        valued client. Unfortunately sometimes, these sources
+        don't always have the information on a specific vehicle. We do endeavour to provide you with the most accurate
+        information we can given these limitations. <br><br>
+
+      <p class="bodyText">
+        Please feel free to contact us by clicking on the checkbox and then filling out the form below.
+        <input type="checkbox" name="formChkBx" class="checkBoxAbout" id="formChkBx">
+      </p>
+      <form action="" method="post" class="bodyText hidden" id="aboutForm">
+        <fieldset name="contactUs" title="Contact Us / Leave Comments" class="aboutFieldset">
+
+          <legend>Contact Us / Leave Comments</legend><br><br>
+
+          <div class="form-flex flex-col">
+            <div class="form-flex flex-row">
+
+              <div class=" flex-col flex-center flex-row">
+                <label>First Name:</label><input class="textAbout" type="text1" id="firstName" placeholder="First Name" required>
+              </div>
 
 
-  </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              <div class=" flex-col flex-center flex-row">
+                <label>Last Name:</label> <input type="text1" class="textAbout" id="lastName" placeholder="Last Name" required>
+              </div>
 
-</div>
-    </main>
+            </div>
 
-    <footer>
-      Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
-          href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a><br>
-          For more cool content, follow YAG's Automotive on social media: 
-          <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="30"  title="Facebook Logo" alt="Facebook Logo"></a>
-          <a href="http://www.instagram.com"><img src="img/IG_Logo.png" height="30" title="Instagram Logo" alt="Instagram Logo"></a>
-          <a href="http://www.twitter.com"><img src="img/Twitter_Logo.png" height="30" title="Twitter Logo" alt="Twitter Logo"></a>
-          <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="30" title="Snapchat Logo" alt="Snapchat Logo"></a><br>
-          
+            <div class="form-flex flex-row">
+
+              <div class=" flex-col flex-center flex-row">
+                <label>Address:</label> <input type="text1" class="textAbout" id="address" placeholder="Address">
+              </div>
+
+              <div class=" flex-col flex-center flex-row">
+                <label>Postal Code:</label> <input type="text1" class="textAbout" id="pCode" placeholder="Postal Code" maxlength="6">
+              </div>
+
+            </div>
+
+            <div class="form-flex flex-row">
+
+              <div class=" flex-col flex-center flex-row">
+                <label>Main Phone:</label> <input type="text1" class="textAbout" id="mainPhone" placeholder="Main Phone" maxlength="10">
+              </div>
+
+              <div class=" flex-col flex-center flex-row">
+                <label>Cell Phone:</label> <input type="text1" class="textAbout" id="cellPhone" placeholder="Cell Phone" maxlength="10">
+              </div>
+
+            </div>
+
+            <div class=" flex-row">
+
+              <div class="flex-col flex-center flex-row">
+                <label>Email:</label> <input type="text1" class="textAbout" id="email" placeholder="Email Address" > <br><br>
+              </div>
+            </div>
+
+            <div class="form-flex flex-row">             
+
+              <div class="form-flex flex-col flex-center ">
+                <label>Comments:</label> <textarea id="commentArea" rows="5" cols="100" resize="none"
+                  placeholder="Please leave comments here"></textarea> 
+              </div>
+
+            </div>
+           </div>
+        </fieldset>
+        <br><br>
+        <button id="btnCommentSubmit" class="buttonsSmall"> Submit</button>
+        <button id="btnClear" class="buttonsSmall">Clear</button>
+
+      </form>
+
+
+      </p><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    </div>
+  </main>
+
+  <footer>
+    Thanks for visiting! Feel free to contact us at 1-800-4SEARCH or email us at <a
+      href="mailto:yagsauto@fakeaddress.com "> Yag's Automotive.</a><br>
+    For more cool content, follow YAG's Automotive on social media:
+    <a href="http://www.facebook.com"><img src="img/facebooklogo.png" height="30" title="Facebook Logo"
+        alt="Facebook Logo"></a>
+    <a href="http://www.instagram.com"><img src="img/IG_Logo.png" height="30" title="Instagram Logo"
+        alt="Instagram Logo"></a>
+    <a href="http://www.twitter.com"><img src="img/Twitter_Logo.png" height="30" title="Twitter Logo"
+        alt="Twitter Logo"></a>
+    <a href="http://www.snapchat.com"><img src="img/Snapchat_Logo.png" height="30" title="Snapchat Logo"
+        alt="Snapchat Logo"></a><br>
+
 
   </footer>
-	  <script src="js/about.js" defer></script>
-    <script src="js/global.js" defer></script>
-  </body>
+  <script src="js/about.js" defer></script>
+  <script src="js/global.js" defer></script>
+</body>
+
 </html>

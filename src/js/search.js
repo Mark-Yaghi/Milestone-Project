@@ -24,25 +24,19 @@ btnReviewSubmit.addEventListener("click", e => {
 
      e.preventDefault();
 
-
          makeSearchTerm = vehicleMake.value;
          makeSearchTerm = makeSearchTerm.trim();
 
          modelSearchTerm = vehicleModel.value;
          modelSearchTerm = modelSearchTerm.trim();
       
-         reviewMakeSubmit(makeSearchTerm);
-        
-
+         reviewMakeSubmit(makeSearchTerm);        
          reviewModelSubmit(modelSearchTerm);
         
-
        //This is where we create the parameters to send to the API, by appending the make then model to the endpoint  
 
        fetch(`https://automotive-car-specs.p.rapidapi.com/cars/specs/${makeSearchTerm}/${modelSearchTerm}`, options)
-      // .then(response => response.json())
-      // .then(response => console.log(response))
-
+     
       .then(response =>
         {
           if (response.ok)
@@ -61,7 +55,7 @@ btnReviewSubmit.addEventListener("click", e => {
 
             if (data)
             {                       
-              let vehicleDescription =//   for(i=0;i<data[i]; i++)
+              let vehicleDescription =
                 {
                   makeName: data[0].make,
                   modelName:data[0].model,
@@ -111,16 +105,13 @@ btnReviewSubmit.addEventListener("click", e => {
                             
         .finally(() => {searchResults.innerText += " \n\nSearch Request complete."}, (console.log(" \n\nSearch Request complete.")));// Promise style finally, to be used after .then() and .catch() statements, will run regardless of if the catch fires.         
     
-
  });
 
 btnClear.addEventListener("click", e => {
 
         e.preventDefault();
         Clear();
-
 });
-
 
 function reviewMakeSubmit(makeSearchTerm)
 {
@@ -180,10 +171,8 @@ function reviewModelSubmit(modelSearchTerm)
         }
        // modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //capitalize the first letter of the model name
         
-        
         return modelReturnBool;
 }
-
 
 function Clear() 
 {
@@ -192,4 +181,3 @@ function Clear()
         vehicleModel.value = "";
         searchResults.innerText = "";    //delete the previous results/clear the screen in prep for the next search.
 }
-
