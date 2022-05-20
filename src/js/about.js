@@ -106,7 +106,7 @@ btnCommentSubmit.addEventListener("click", e => {
     }
 
     contactInfoArray.push(tempFName, tempLName, tempAddress, tempPCode, tempMainPhone, tempCellPhone, tempEmail, tempComments);
-    alert("contact info array:" + contactInfoArray);
+    alert("Contact info array:" + contactInfoArray);
 
 });
 
@@ -154,7 +154,6 @@ function verifyAddress(address) {
     if (address.length >= 10 && (checkAddress(address)) == true)  // Check to see if the client entered the correct number of characters. If so, call the checkVin function.
     {
         address = address.toUpperCase();
-        alert("The address you entered: " + address + " is a valid address.");
         validAddress = true;
     }
 

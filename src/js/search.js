@@ -6,7 +6,6 @@ const options = {
 	}
 };
 
-
 let btnReviewSubmit = document.querySelector("#btnReviewSubmit");
 let btnClear = document.querySelector("#btnClear");
 let vehicleMake = document.querySelector("#vehicleMake");
@@ -51,7 +50,7 @@ btnReviewSubmit.addEventListener("click", e => {
         })
 
         .then(data =>
-        { // In these braces, you have your JSON data. Create object with relevant properties and assign the JSON data to them
+        {
 
             if (data)
             {                       
@@ -87,7 +86,7 @@ btnReviewSubmit.addEventListener("click", e => {
                   frontBrakes:data[0].front_brakes,
                   rearBrakes:data[0].rear_brakes,                          
                 }
-                   Clear();                         // Clear the screen to prepare screen for next data return
+                   Clear();                         // Clear the screen to prepare for incoming data to be displayed.
                
             searchResults.innerText = `Here are the specifications of the ${vehicleDescription.year} ${vehicleDescription.makeName} ${vehicleDescription.modelName} : \nBody: ${vehicleDescription.body}; \nDoors: ${vehicleDescription.doors}; \nSeats: ${vehicleDescription.seats}; \nCurb Weight: ${vehicleDescription.weight} kg; 
             \n\nENGINE INFORMATION:
@@ -123,9 +122,9 @@ function reviewMakeSubmit(makeSearchTerm)
                 vehicleMake.focus();
                 makeReturnBool = false;
         }
-        else if (!/^[A-Za-z0-9 - ]*$/.test(makeSearchTerm)) 
+        else if (!/^[A-Za-z - ]*$/.test(makeSearchTerm)) 
         {
-                alert("Please enter a name that only contains letters or numbers.");
+                alert("Please enter a name that only contains letters.");
                 vehicleMake.value = "";
                 vehicleMake.focus();
                 makeReturnBool = false;
@@ -134,7 +133,6 @@ function reviewMakeSubmit(makeSearchTerm)
         {
                 vehicleMake.value = vehicleMake.value.toUpperCase();
                 makeReturnBool = true;
-               // vehicleModel.focus();  //We have a valid name, set focus to the next field
         }
 
         return makeReturnBool;
@@ -166,10 +164,9 @@ function reviewModelSubmit(modelSearchTerm)
                     vehicleModel.value = vehicleModel.value.toUpperCase();
                }
                 modelReturnBool = true;
-                //vehicleYear.focus();  //We have a valid name, set focus to the next field
+               
 
         }
-       // modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //capitalize the first letter of the model name
         
         return modelReturnBool;
 }
@@ -179,5 +176,5 @@ function Clear()
         vehicleMake.value = "";
         vehicleMake.focus();
         vehicleModel.value = "";
-        searchResults.innerText = "";    //delete the previous results/clear the screen in prep for the next search.
+        searchResults.innerText = "";    //Delete the previous results/clear the screen in prep for the next search.
 }

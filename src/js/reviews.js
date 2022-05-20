@@ -15,7 +15,6 @@ let yearReturnBool=false;
 
      e.preventDefault();
 
-
          makeSearchTerm = vehicleMake.value;
          makeSearchTerm = makeSearchTerm.trim();
 
@@ -44,9 +43,6 @@ btnClear.addEventListener("click", e => {
 
 function reviewMakeSubmit(makeSearchTerm)
 {
-
-       // alert("Line 57, in the make function. makeSearchTerm:" + makeSearchTerm);
-
         if (makeSearchTerm.length == 0) 
         {
                 alert("Please enter a vehicle manufacturer/make.");
@@ -54,9 +50,9 @@ function reviewMakeSubmit(makeSearchTerm)
                 vehicleMake.focus();
                 makeReturnBool = false;
         }
-        else if (!/^[A-Za-z0-9 - ]*$/.test(makeSearchTerm)) 
+        else if (!/^[A-Za-z - ]*$/.test(makeSearchTerm)) 
         {
-                alert("Please enter a name that only contains letters or numbers.");
+                alert("Please enter a name that only contains letters.");
                 vehicleMake.value = "";
                 vehicleMake.focus();
                 makeReturnBool = false;
@@ -64,8 +60,7 @@ function reviewMakeSubmit(makeSearchTerm)
         else 
         {
                 vehicleMake.value = vehicleMake.value.toUpperCase();
-                makeReturnBool = true;
-               // vehicleModel.focus();  //We have a valid name, set focus to the next field
+                makeReturnBool = true;               
         }
 
         return makeReturnBool;
@@ -90,24 +85,20 @@ function reviewModelSubmit(modelSearchTerm)
                 modelReturnBool = false;
         }
         else 
-        {
-               // alert("You entered a valid name: " + modelSearchTerm);
+        {               
                 vehicleModel.value = vehicleModel.value.toUpperCase();
-                modelReturnBool = true;
-                //vehicleYear.focus();  //We have a valid name, set focus to the next field
-
+                modelReturnBool = true; 
         }
-        modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //capitalize the first letter of the model name
-       // alert(" your vehicle model is a: " + makeSearchTerm.toUpperCase() + " " + modelSearchTerm);
-        
+        modelSearchTerm = modelSearchTerm.charAt(0).toUpperCase() + modelSearchTerm.slice(1);                    //Capitalize the first letter of the model name
+              
         return modelReturnBool;
 }
 
 function reviewYearSubmit(yearSearchTerm)
 {
         
-        const dYear=new Date();                                     //create a date object
-         let dateYear=(dYear.getFullYear()+1);                   //get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
+        const dYear=new Date();                                     //Create a date object
+         let dateYear=(dYear.getFullYear()+1);                   //Get this year's 'year' number, and add one to it so that it'll always give us the current year +1; i.e., if this year is 2022, it'll return 2023
                 
          if(yearSearchTerm.length!=4)
         {
@@ -138,5 +129,5 @@ function Clear()
         vehicleMake.focus();
         vehicleModel.value = "";
         vehicleYear.value = "";
-        searchResults.innerText = "";    //delete the previous results/clear the screen in prep for the next search.
+        searchResults.innerText = "";    //Delete the previous results/clear the screen in prep for the next search.
 }
