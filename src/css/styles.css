@@ -239,7 +239,12 @@ aside .img {
 }
 
 #vinRecallDetails {
-    background-color: rgb(242, 232, 219);
+    background-color: rgb(239, 213, 178);
+}
+
+#searchResults
+{
+    background-color: rgb(239, 213, 178);
 }
 
 .form-inline {
@@ -262,6 +267,13 @@ footer {
 
 footer a {
     color: rgb(228, 226, 77);
+}
+
+#hr                   /*Displays the horizontal line on the recalls page to separate the recalls. */
+{
+    height:10px;
+    background-color: rgb(229, 238, 241);
+    border-style: hidden;
 }
 
 /* The code below deals with the customization of the scroll bar. */

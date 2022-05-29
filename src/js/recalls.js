@@ -78,16 +78,16 @@ btnRecallSubmit.addEventListener("click", e => {
 					<span class=bold> Recall Consequences:</span> ${recallDetails.recallConsequence}<br>
 					<span class=bold> Recall Remedy:</span> ${recallDetails.recallRemedy}<br>
 					<span class=bold> Recall Notes:</span> ${recallDetails.recallNotes} 
-					<hr>`;
+					<hr id="hr">`;
 					}
 
 					engineDisplacement = recallDescription.displacement;
 					engineDisplacement = Math.round(engineDisplacement * 100) / 100;                     // Get the displacement to display only two decimal places.
 
 
-					vinSearchResults.innerHTML = `Here are the results of your Recall Search on the VIN you entered: The vehicle is a:<span class=bold> ${recallDescription.year}, ${recallDescription.makeName} ${recallDescription.modelName} ${recallDescription.trimLevel} </span>; 
+					vinSearchResults.innerHTML = `Here are the results of your Recall Search on the VIN you entered: The vehicle is a:<span class=bold> ${recallDescription.year}, ${recallDescription.makeName} ${recallDescription.modelName} ${recallDescription.trimLevel}</span>; 
 			  the VIN is <span class=bold>${recallDescription.vin}</span>. It is powered by a ${engineDisplacement}L 
-			  ${recallDescription.engineConfig} ${recallDescription.cylinders}-cylinder engine mated to a ${recallDescription.transmission}. It is classified as a ${recallDescription.body},
+			  ${recallDescription.engineConfig ??""} ${recallDescription.cylinders}-cylinder engine ${recallDescription.transmission ??""}. It is classified as a ${recallDescription.body},
 			  and was manufactured in the ${recallDescription.buildCity} factory in ${recallDescription.buildState}, ${recallDescription.builtIn}. There are currently <span class=bold>` + recallArraySize + `</span> recalls on the vehicle you searched. <br><br>
 			  To find out more about your vehicle's recall(s), get in touch with <a href="http://www.${recallDescription.makeName}.com" target="_blank">${recallDescription.makeName}</a> .`;
 				}

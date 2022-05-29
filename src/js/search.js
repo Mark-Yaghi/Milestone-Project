@@ -88,14 +88,14 @@ btnReviewSubmit.addEventListener("click", e => {
                 }
                    Clear();                         // Clear the screen to prepare for incoming data to be displayed.
                
-            searchResults.innerText = `Here are the specifications of the ${vehicleDescription.year} ${vehicleDescription.makeName} ${vehicleDescription.modelName} : \nBody: ${vehicleDescription.body}; \nDoors: ${vehicleDescription.doors}; \nSeats: ${vehicleDescription.seats}; \nCurb Weight: ${vehicleDescription.weight} kg; 
-            \n\nENGINE INFORMATION:
-            Engine Type: ${vehicleDescription.engineType}; \nPowertrain: ${vehicleDescription.powerTrain}; \nEngine Position:${vehicleDescription.enginePosition}; \nCylinders: ${vehicleDescription.cylinders}; \nEngine Displacement: ${vehicleDescription.engineDisplacement};
-            Valves per Cylinder ${vehicleDescription.valves}; \nAspiration: ${vehicleDescription.aspiration};\nPower: ${vehicleDescription.power}hp; \nTorque: ${vehicleDescription.torque} lb/ft;                                                                                                    
-             \n\nDRIVE / BRAKING  SYSTEM:
-             Drive Wheels: ${vehicleDescription.driveWheels}; \nNumber of Gears: ${vehicleDescription.noOfGears}; \nFront Brakes: ${vehicleDescription.frontBrakes};\n Rear Brakes: ${vehicleDescription.rearBrakes};
-             \n\n FUEL SYSTEM: \nFuel System Type: ${vehicleDescription.fuelSystem};\nFuel Type: ${vehicleDescription.fuelType}; \nFuel Capacity:  ${vehicleDescription.fuelCapacity} liters; \nCity Mileage: ${vehicleDescription.cityMileage} l/100km; Highway Mileage: ${vehicleDescription.highwayMileage} l/100km; Combined Mileage: ${vehicleDescription.combinedMileage} l/100km;
-              \n\nPERFORMANCE: \nAcceleration: ${vehicleDescription.acceleration}; \nTop Speed ${vehicleDescription.topSpeed} `;
+            searchResults.innerHTML += `Here are the specifications of the ${vehicleDescription.year} ${vehicleDescription.makeName} ${vehicleDescription.modelName} : <br>Body: ${vehicleDescription.body}; <br>Doors: ${vehicleDescription.doors}; <br>Seats: ${vehicleDescription.seats}; <br>Curb Weight: ${vehicleDescription.weight} kg; 
+            <hr id="hr"><br><span class=bold>ENGINE INFORMATION:</span><br>
+            Engine Type: ${vehicleDescription.engineType}; <br>Powertrain: ${vehicleDescription.powerTrain}; <br>Engine Position:${vehicleDescription.enginePosition}; <br>Cylinders: ${vehicleDescription.cylinders}; <br>Engine Displacement: ${vehicleDescription.engineDisplacement};
+            Valves per Cylinder ${vehicleDescription.valves}; <br>Aspiration: ${vehicleDescription.aspiration};<br>Power: ${vehicleDescription.power}hp; <br>Torque: ${vehicleDescription.torque} lb/ft;                                                                                                    
+            <hr id="hr"> <br><br>DRIVE / BRAKING  SYSTEM:<br>
+             Drive Wheels: ${vehicleDescription.driveWheels}; <br>Number of Gears: ${vehicleDescription.noOfGears}; <br>Front Brakes: ${vehicleDescription.frontBrakes};<br> Rear Brakes: ${vehicleDescription.rearBrakes};
+             <hr id="hr"><br><br> FUEL SYSTEM: <br>Fuel System Type: ${vehicleDescription.fuelSystem};<br>Fuel Type: ${vehicleDescription.fuelType}; <br>Fuel Capacity:  ${vehicleDescription.fuelCapacity} liters; <br>City Mileage: ${vehicleDescription.cityMileage} l/100km; Highway Mileage: ${vehicleDescription.highwayMileage} l/100km; Combined Mileage: ${vehicleDescription.combinedMileage} l/100km;
+             <hr id="hr"><br><br>PERFORMANCE: <br>Acceleration: ${vehicleDescription.acceleration}; <br>Top Speed ${vehicleDescription.topSpeed} <hr id="hr">`;
               
         }                                
 

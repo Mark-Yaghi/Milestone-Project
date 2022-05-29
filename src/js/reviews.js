@@ -11,6 +11,7 @@ let makeReturnBool = false;
 let modelReturnBool=false;
 let yearReturnBool=false;
 
+
  btnReviewSubmit.addEventListener("click", e => {
 
      e.preventDefault();
@@ -31,7 +32,7 @@ let yearReturnBool=false;
          reviewYearSubmit(yearSearchTerm);
 
          searchResults.innerText="Search Results Go Here."
-         
+             
  });
 
 btnClear.addEventListener("click", e => {
@@ -123,6 +124,7 @@ function reviewYearSubmit(yearSearchTerm)
        return yearReturnBool;
 
 }
+
 function Clear() 
 {
         vehicleMake.value = "";
@@ -131,3 +133,4 @@ function Clear()
         vehicleYear.value = "";
         searchResults.innerText = "";    //Delete the previous results/clear the screen in prep for the next search.
 }
+
