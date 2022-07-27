@@ -11,8 +11,10 @@ let btnClear = document.querySelector("#btnClear");
 let vinSearchBar = document.querySelector("#vinSearchBar");
 let vinSearchResults = document.querySelector("#vinSearchResults");
 let vinRecallDetails = document.querySelector("#vinRecallDetails");
-
+let vinSelect = document.querySelector("#vinSelect");
+let vinSelectArray=[];
 let vinSearchTerm;
+
 
 btnRecallSubmit.addEventListener("click", e => {
 
@@ -22,6 +24,11 @@ btnRecallSubmit.addEventListener("click", e => {
 	vinSearchTerm = vinSearchTerm.trim();
 
 	if (validateVin(vinSearchTerm) == true) {
+
+
+		vinSearchResults.innerText = "";    //Delete the previous results/clear the screen in prep for the next search.
+	    vinSearchResults.innerHTML = "";
+	    vinRecallDetails.innerHTML = "";
 
 		fetch(`https://cis-vin-decoder.p.rapidapi.com/vinDecode?vin=${vinSearchTerm}`, options)
 			.then(response => {
@@ -96,11 +103,37 @@ btnRecallSubmit.addEventListener("click", e => {
 			.catch(exception => { vinSearchResults.innerText = exception; })
 
 			.finally(() => { vinRecallDetails.innerHTML += " \n\nSearch Request complete." }, (console.log(" \n\nSearch Request complete.")));
-	}
 
-	else {
-		Clear();
-	}
+			let vinStored = false;
+			for(i=0; i<vinSelectArray.length; i++)
+			{
+
+				if (vinSelectArray[i]==vinSearchTerm) vinStored=true;
+		
+			}
+
+			if(vinStored==false)
+			{
+
+				vinSelectArray.push(vinSearchTerm);
+            	localStorage.VIN = vinSelectArray;
+				alert(vinSelectArray.length);
+				//var selectValue = document.createElement("select");
+				var optionValue = document.createElement("option");
+				
+				optionValue.value = vinSearchTerm;
+				optionValue.text = vinSearchTerm;	//vinSelectArray[i];
+
+				//vinSelect.options.add(new option(optionValue.text,optionValue.value ));
+				//selectValue = ;
+				vinSelect.appendChild(optionValue);
+				
+				//alert("vinSelect.Value =  :" + vinSelect);
+			}
+			
+	}	
+	else Clear();
+	
 });
 
 btnClear.addEventListener("click", e => {
@@ -110,12 +143,33 @@ btnClear.addEventListener("click", e => {
 
 });
 
+vinSelect.addEventListener("change", e =>{                //trying to set this up so that it will store previously used VINs, and allow a user to click on a vin and search for it again.
+
+	e.preventDefault();
+	if(vinSelect.count==0)
+	{
+		alert("There are no VINs currently saved. Please enter a VIN in the Vin Search Bar.");
+		vinSearchBar.focus();
+
+	}
+	
+	// Store	
+	//localStorage.setItem("vin", vinSelectArray);
+	
+	else
+	{ 		
+		console.log(vinSelect.value);
+		vinSearchBar.value = vinSelect.value ;//vinSelect.value;
+	}
+});
+
 function Clear() {
 	vinSearchBar.value = "";
 	vinSearchBar.focus();
 	vinSearchResults.innerText = "";    //Delete the previous results/clear the screen in prep for the next search.
 	vinSearchResults.innerHTML = "";
 	vinRecallDetails.innerHTML = "";
+	vinSelect.value = "";
 }
 // <--------------------------------------------BELOW IS THE CODE TO VERIFY THE VIN ENTERED ------------------------------------------>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -149,3 +203,37 @@ function validateVin(vinSearchTerm) {
 function checkVin(vinSearchTerm) {
 	return /^[A-HJ-NPR-Za-hj-npr-z0-9]*$/.test(vinSearchTerm);   //Check to make sure the user entered ONLY letters (upper and lower case) and numbers. No 0 (zero) i, I, o, O or other characters acceptable.                   
 }
+
+
+window.onload = () =>{
+	console.log(localStorage.VIN);
+	console.log(vinSelect);
+	let importArray = localStorage.VIN.split(',');
+	console.log(importArray);
+	for (i=0; i< importArray.length; i++)
+	{
+		console.log(i + ": "+importArray[i]);
+		var optionValue = document.createElement("option");
+		
+		optionValue.value = importArray[i];
+		optionValue.text = importArray[i];	//vinSelectArray[i];
+		console.log(optionValue);
+		//vinSelect.options.add(new option(optionValue.text,optionValue.value ));
+		//selectValue = ;
+		vinSelect.appendChild(optionValue);
+		//vinSelect = vinSelectArray[i];
+
+		//document.getElementById("vinSelect").value= localStorage.vinSelectArray[i];
+		//document.getElementById("vinSelect").add(i,(localStorage.vinSelectArray[i]));
+		//vinSelect.options.add(new Option(localStorage.vinSelectArray[i], i))
+		//vinSelect.options.add(new option(optionValue.value, optionValue.text));
+	
+	}	
+	// Retrieve
+	//document.getElementById("result").innerHTML = localStorage.lastname;
+
+
+};            // When the window loads, automatically call the loadSelect() to populate the select drop down.
+
+
+

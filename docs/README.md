@@ -22,5 +22,6 @@ VINS for testing the recall page:
  5J6RM4H50GL105806 <-- Honda Civic 
  1FMCU9DZ8MUB12974 <--Ford Escape 
  1fmcu9dz8mub12974 <--Ford Escape lowercase letters
+ JM3KFBCL6H0170522 <--2017 Mazda CX-5 GS
 
  Fake VIN:  0fmcu9di8muo12974  

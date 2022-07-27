@@ -54,8 +54,29 @@
   </p>
    
         <br><br>
-        <label>Please enter the vehicle's 17-character VIN here:</label>
-        <input type="text" class="searchBar" id="vinSearchBar" placeholder="Enter 17-character VIN here">
+        <div class="flex-select">
+            <div class="flex-select">
+              <label>Please enter the vehicle's 17-character VIN here:</label>
+              <input type="text" class="searchBar" id="vinSearchBar" placeholder="Enter 17-character VIN here" maxlength="17">  OR
+            </div>
+          <div class="flex-select">
+
+             <label for="cars">Select a previously viewed VIN:</label>
+            <select name="cars" id="vinSelect" class="searchBar">
+             <option value="" selected disabled>--Select a Previous VIN--</option>
+              <!-- <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="mercedes">Mercedes</option>
+              <option value="audi">Audi</option>-->
+            </select>
+          </div>
+
+
+        </div>
+        <br><br>
+       
+       
+       
         <br><br><br>
         <button id="btnRecallSubmit" class="buttons"> Submit Search</button>
         <button id="btnClear"  class="buttons">Clear Search</button>

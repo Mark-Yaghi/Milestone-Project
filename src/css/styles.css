@@ -14,6 +14,15 @@
     display: flex;
     word-wrap: normal;
     justify-content: space-between;
+   
+}
+
+.flex-select
+{
+    display: flex;
+    word-wrap: normal;    
+    gap: 3rem;
+
 }
 
 .hidden {
@@ -21,10 +30,8 @@
 }
 
 /*  Header  */
-header
-
-/* Define header and make it stick to the top of the page.*/
-    {
+header      /* Define header and make it stick to the top of the page.*/
+{
     width: 100%;
     background-color: rgba(62, 88, 195, 0.99);
     position: sticky;
@@ -100,10 +107,8 @@ body {
 
 }
 
-#mainBody
-
-/*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
-    {
+#mainBody      /*This tag is used to move the text on screen over just a bit without affecting the header and footer.*/
+{
     margin-left: 3%;
 }
 
@@ -131,12 +136,9 @@ body .buttonsSmall:hover {
     background-color: aqua;
 }
 
-body .bold
-
-/* Used on the recalls page to bold the titles of the returned fields.*/
-    {
+body .bold                /* Used on the recalls page to bold the titles of the returned fields.*/
+{
     font-weight: bold;
-
 }
 
 .bodyText {
@@ -145,25 +147,23 @@ body .bold
     padding: 3px;
 }
 
-input[type="text"],
+input[type=text], select,
 textarea {
-    width: 37%;
+    width: 42%;
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
     resize: none;
     background-color: beige;
-    padding: 2px 2px 2px 10px;
+    padding: 2px 10px 2px 10px;
 }
 
 .textAbout[type="text"] {
     width: 75%;
-
 }
 
 input.textAbout {
     height: 35px;
-
 }
 
 fieldset {
@@ -175,8 +175,14 @@ fieldset .searchBar {
 }
 
 textarea {
-    width: 80%;
-    height: 200px;
+    width: 70%;
+    height: 150px;
+}
+
+.vinTextArea
+{
+    justify-self: center;
+    width:20%;
 }
 
 .aboutFieldset {
