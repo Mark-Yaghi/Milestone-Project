@@ -126,8 +126,7 @@ btnRecallSubmit.addEventListener("click", e => {
 
 				//vinSelect.options.add(new option(optionValue.text,optionValue.value ));
 				//selectValue = ;
-				vinSelect.appendChild(optionValue);                                 // Add the new option to the select
-				
+				vinSelect.appendChild(optionValue);                                // Add the new option to the select
 				
 			}
 			
